@@ -1,0 +1,19 @@
+2023-08-19 01:13:01,594 [ 1] INFO  Unity: LoadingManager start
+2023-08-19 01:13:15,172 [ 1] INFO  Unity: UserLoginRequest::user :123456 psw:123456
+2023-08-19 01:13:15,174 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-08-19 01:13:15,176 [ 1] INFO  Unity: DoConnect
+2023-08-19 01:13:15,178 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-08-19 01:13:15,180 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
+
+2023-08-19 01:13:15,182 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-08-19 01:13:15,879 [ 1] INFO  Unity: UserLoginRequest::user :123456 psw:123456
+2023-08-19 01:13:16,481 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2023-08-19 01:13:16,484 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-08-19 01:13:16,751 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-08-19 01:13:16,752 [ 1] INFO  Unity: DataManager > DataManager()
+2023-08-19 01:13:20,943 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-08-19 01:13:20,944 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+
