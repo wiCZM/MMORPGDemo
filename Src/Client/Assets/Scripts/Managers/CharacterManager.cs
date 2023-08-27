@@ -23,6 +23,8 @@ namespace Managers
         public CharacterManager()
         {
 
+
+
         }
 
         public void Dispose()
@@ -50,7 +52,6 @@ namespace Managers
             Character character = new Character(cha);
             this.Characters[cha.Id] = character;
             EntityManager.Instance.AddEntity(character);
-
             if (OnCharacterEnter!=null)
             {
                 OnCharacterEnter(character);

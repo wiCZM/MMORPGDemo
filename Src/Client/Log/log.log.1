@@ -1,99 +1,60 @@
-2023-08-20 15:05:40,040 [ 1] INFO  Unity: LoadingManager start
-2023-08-20 15:06:08,154 [ 1] INFO  Unity: UserLoginRequest::user :123456 psw:123456
-2023-08-20 15:06:08,156 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-08-20 15:06:08,157 [ 1] INFO  Unity: DoConnect
-2023-08-20 15:06:08,158 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
-2023-08-20 15:06:08,160 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
+2023-08-27 16:30:40,898 [ 1] INFO  Unity: LoadingManager start
+2023-08-27 16:34:55,382 [ 1] INFO  Unity: UserLoginRequest::user :123456 psw:123456
+2023-08-27 16:34:55,402 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-08-27 16:34:55,403 [ 1] INFO  Unity: DoConnect
+2023-08-27 16:34:55,406 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-08-27 16:34:55,408 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
 
-2023-08-20 15:06:08,163 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-08-20 15:06:10,116 [ 1] INFO  Unity: UserLoginRequest::user :123456 psw:123456
-2023-08-20 15:06:10,669 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2023-08-20 15:06:10,672 [ 1] INFO  Unity: LoadLevel: CharSelect
-2023-08-20 15:06:10,927 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-20 15:06:10,929 [ 1] INFO  Unity: DataManager > DataManager()
-2023-08-20 15:06:20,276 [ 1] INFO  Unity: UserCreateCharacterRequest::name :测试1 class:Warrior
-2023-08-20 15:06:20,343 [ 1] INFO  Unity: OnUserCreateCharacter:Success [None]
-2023-08-20 15:07:01,723 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
+2023-08-27 16:34:55,420 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-08-27 16:34:56,153 [ 1] INFO  Unity: UserLoginRequest::user :123456 psw:123456
+2023-08-27 16:34:57,215 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2023-08-27 16:34:57,224 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-08-27 16:34:57,602 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-08-27 16:34:57,612 [ 1] INFO  Unity: DataManager > DataManager()
+2023-08-27 16:35:01,590 [ 1] INFO  Unity: Select Char:[14]哈哈[Wizard]
+2023-08-27 16:35:02,704 [ 1] INFO  Unity: UserGameEnterRequest::characterId :1
+2023-08-27 16:35:02,735 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2023-08-27 16:35:02,757 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
+2023-08-27 16:35:02,769 [ 1] INFO  Unity: AddCharacter:1:哈哈 Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-08-27 16:35:02,787 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-08-27 16:35:02,789 [ 1] INFO  Unity: OnCharacterEnter:1
+2023-08-27 16:35:02,790 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-08-27 16:35:03,431 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
-  at Network.NetClient.ProcessRecv () [0x00084] in D:\T2\Unity\Demo\mymmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:340 
+2023-08-27 16:35:03,432 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2023-08-20 15:07:01,725 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
+2023-08-27 16:35:03,533 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-08-27 16:35:03,566 [ 1] INFO  Unity: UIMinimap Start: minimapBoundingBox is not null
+2023-08-27 16:35:07,959 [ 1] INFO  Unity: Getting MinimapBoundingBox value: null
+2023-08-27 16:35:22,267 [ 1] INFO  Unity: Getting MinimapBoundingBox value: null
+2023-08-27 16:35:22,652 [ 1] INFO  Unity: Getting MinimapBoundingBox value: null
+2023-08-27 16:37:16,589 [ 1] WARN  Unity: UpdateMap.minimapBoundingBox is null or destroyed!
 UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:354)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:434)
+UIMinimap:UpdateMap() (at Assets/Scripts/UI/Minimap/UIMinimap.cs:35)
+UIMinimap:Start() (at Assets/Scripts/UI/Minimap/UIMinimap.cs:22)
 
-2023-08-20 15:07:01,744 [ 1] INFO  Unity: DoConnect
-2023-08-20 15:07:01,745 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
-2023-08-20 15:07:01,746 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
+2023-08-27 16:37:16,592 [ 1] INFO  Unity: MinimapBoundingBox value: not null
+2023-08-27 16:37:16,594 [ 1] INFO  Unity: Getting MinimapBoundingBox value: not null
+2023-08-27 16:37:16,594 [ 1] INFO  Unity: MinimapBoundingBox value: not null
+2023-08-27 16:37:17,198 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2023-08-20 15:07:03,786 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+2023-08-27 16:37:17,199 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2023-08-27 16:37:17,252 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-08-27 16:37:17,253 [ 1] INFO  Unity: UIMinimap Start: minimapBoundingBox is not null
+2023-08-27 16:37:17,254 [ 1] INFO  Unity: Getting MinimapBoundingBox value: null
+2023-08-27 16:37:17,254 [ 1] WARN  Unity: UpdateMap.minimapBoundingBox is null or destroyed!
 UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+UIMinimap:UpdateMap() (at Assets/Scripts/UI/Minimap/UIMinimap.cs:35)
+UIMinimap:Start() (at Assets/Scripts/UI/Minimap/UIMinimap.cs:22)
 
-2023-08-20 15:07:03,789 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-2023-08-20 15:07:03,882 [ 1] INFO  Unity: DoConnect
-2023-08-20 15:07:03,883 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
-2023-08-20 15:07:03,885 [ 1] INFO  Unity: Connect[1] to server 10.0.0.100:8000
-
-2023-08-20 15:07:05,936 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-2023-08-20 15:07:05,937 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-2023-08-20 15:07:05,969 [ 1] INFO  Unity: DoConnect
-2023-08-20 15:07:05,970 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
-2023-08-20 15:07:05,970 [ 1] INFO  Unity: Connect[2] to server 10.0.0.100:8000
-
-2023-08-20 15:07:08,006 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-2023-08-20 15:07:08,007 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-2023-08-20 15:07:08,008 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :1 reason:Cannot connect to server
-2023-08-20 15:07:11,314 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-08-20 15:07:11,315 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-08-27 16:37:17,255 [ 1] INFO  Unity: MinimapBoundingBox value: not null
+2023-08-27 16:37:17,255 [ 1] INFO  Unity: Getting MinimapBoundingBox value: not null
+2023-08-27 16:37:17,256 [ 1] INFO  Unity: MinimapBoundingBox value: not null
+2023-08-27 16:40:21,611 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-08-27 16:40:21,613 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
+2023-08-27 16:40:21,615 [ 1] INFO  Unity: Character_1_哈哈 OnDestroy :ID:1 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 

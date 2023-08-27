@@ -5,7 +5,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using Managers;
 
-public class UIMinimap : MonoBehaviour {
+public class UIMinimap : MonoBehaviour
+{
 
     public Collider minimapBoundingBox;
     public Image minimap;
@@ -13,52 +14,46 @@ public class UIMinimap : MonoBehaviour {
     public Text mapName;
 
     private Transform playerTransform;
-    // Use this for initialization
-    //void Start()
-    //{
-    //    this.InitMap();
-    //}
-    IEnumerator Start()
+
+    void Start()
     {
-        while (User.Instance.CurrentCharacterObject == null)
-        {
-            yield return null; // 等待下一帧
-        }
-        this.InitMap();
+        Debug.Log("UIMinimap Start: minimapBoundingBox is " + (minimapBoundingBox == null ? "null" : "not null"));
+        MinimapManager.Instance.minimap = this;
+        this.UpdateMap();
     }
 
-
-    void InitMap()
+    public void UpdateMap()
     {
         this.mapName.text = User.Instance.CurrentMapData.Name;
-        if (this.minimap.overrideSprite == null)
-            this.minimap.overrideSprite = MinimapManager.Instance.LoadCurrentMinimap();
+        this.minimap.overrideSprite = MinimapManager.Instance.LoadCurrentMinimap();
 
         this.minimap.SetNativeSize();
-        //this.minimap.transform.localPosition = Vector3.zero;
-        this.playerTransform = User.Instance.CurrentCharacterObject.transform;
+        this.minimap.transform.localPosition = Vector3.zero;
+        this.minimapBoundingBox = MinimapManager.Instance.MinimapBoundingBox;
+        if (minimapBoundingBox == null)
+        {
+            Debug.LogWarning("UpdateMap.minimapBoundingBox is null or destroyed!");
+            return;
+        }
+        this.playerTransform = null;
     }
 
-    //// Update is called once per frame
     void Update()
     {
-        //if (this.playerTransform == null)
-        //{
-        //    if (User.Instance.CurrentCharacterObject != null)
-        //    {
-        //        this.playerTransform = User.Instance.CurrentCharacterObject.transform;
-        //    }
-        //    else
-        //    {
-        //        return; // 如果 playerTransform 仍然是 null，则直接返回，跳过此次 Update。
-        //    }
-        //}
+        if (playerTransform == null)
+            playerTransform = MinimapManager.Instance.PlayerTransform;
         if (minimapBoundingBox == null || playerTransform == null) return;
         float realWidth = minimapBoundingBox.bounds.size.x;
         float realHeight = minimapBoundingBox.bounds.size.z;
 
         float relaX = playerTransform.position.x - minimapBoundingBox.bounds.min.x;
         float relaY = playerTransform.position.z - minimapBoundingBox.bounds.min.z;
+
+        if (minimapBoundingBox == null)
+        {
+            Debug.LogWarning("Update.minimapBoundingBox is null or destroyed!");
+            return;
+        }
 
         float pivotX = relaX / realWidth;
         float pivotY = relaY / realHeight;

@@ -42,6 +42,7 @@ namespace Services
             MessageDistributer.Instance.Unsubscribe<UserCreateCharacterResponse>(this.OnUserCreateCharacter);
             MessageDistributer.Instance.Unsubscribe<UserGameEnterResponse>(this.OnGameEnter);
             MessageDistributer.Instance.Unsubscribe<UserGameLeaveResponse>(this.OnGameLeave);
+            MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
             NetClient.Instance.OnConnect -= OnGameServerConnect;
             NetClient.Instance.OnDisconnect -= OnGameServerDisconnect;
         }
@@ -209,10 +210,9 @@ namespace Services
         private void OnCharacterEnter(object sender, MapCharacterEnterResponse message)
         {
             Debug.LogFormat("OnCharacterEnter:{0}", message.mapId);
-            NCharacterInfo info = message.Characters[0];
-            User.Instance.CurrentCharacter = info;
+            //NCharacterInfo info = message.Characters[0];//会导致出现每次新角色一进入,就会把新角色的id分发给全部账号,而不是单纯的信息通知
+            //User.Instance.CurrentCharacter = info;
             SceneManager.Instance.LoadScene(DataManager.Instance.Maps[message.mapId].Resource);
-
         }
 
         void OnUserCreateCharacter(object sender, UserCreateCharacterResponse response)
@@ -264,9 +264,9 @@ namespace Services
 
         void OnGameLeave(object sender, UserGameLeaveResponse response)
         {
+            MapService.Instance.CurrentMapId = 0;
+            User.Instance.CurrentCharacter = null;
             Debug.LogFormat("OnGameLeave:{0} [{1}]", response.Result, response.Errormsg);
         }
-
-
     }
 }

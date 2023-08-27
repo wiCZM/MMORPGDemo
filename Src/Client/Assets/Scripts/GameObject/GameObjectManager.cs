@@ -28,6 +28,7 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
 
     void OnCharacterEnter(Character cha)
     {
+
         CreateCharacterObject(cha);
     }
 
@@ -51,17 +52,18 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
         }
     }
 
+
     private void CreateCharacterObject(Character character)
     {
         if (!Characters.ContainsKey(character.entityId) || Characters[character.entityId] == null)
         {
             Object obj = Resloader.Load<Object>(character.Define.Resource);
-            if(obj == null)
+            if (obj == null)
             {
-                Debug.LogErrorFormat("Character[{0}] Resource[{1}] not existed.",character.Define.TID, character.Define.Resource);
+                Debug.LogErrorFormat("Character[{0}] Resource[{1}] not existed.", character.Define.TID, character.Define.Resource);
                 return;
             }
-            GameObject go = (GameObject)Instantiate(obj,this.transform);
+            GameObject go = (GameObject)Instantiate(obj, this.transform);
             go.name = "Character_" + character.Info.Id + "_" + character.Info.Name;
             Characters[character.entityId] = go;
 
@@ -69,6 +71,7 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
         }
         this.InitGameObject(Characters[character.entityId], character);
     }
+
     private void InitGameObject(GameObject go, Character character)
     {
         go.transform.position = GameObjectTool.LogicToWorld(character.position);
@@ -100,4 +103,5 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
         }
     }
 }
+
 

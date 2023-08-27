@@ -1,132 +1,38 @@
-2023-08-20 23:48:25,861 [ 1] INFO  Unity: LoadingManager start
-2023-08-20 23:48:50,803 [ 1] INFO  Unity: UserLoginRequest::user :123456 psw:123456
-2023-08-20 23:48:50,805 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-08-20 23:48:50,807 [ 1] INFO  Unity: DoConnect
-2023-08-20 23:48:50,808 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
-2023-08-20 23:48:50,810 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
+2023-08-27 16:41:10,244 [ 1] INFO  Unity: LoadingManager start
+2023-08-27 16:42:53,608 [ 1] INFO  Unity: UserLoginRequest::user :123456 psw:123456
+2023-08-27 16:42:53,620 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-08-27 16:42:53,621 [ 1] INFO  Unity: DoConnect
+2023-08-27 16:42:53,624 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-08-27 16:42:53,626 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
 
-2023-08-20 23:48:50,813 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-08-20 23:48:51,152 [ 1] INFO  Unity: UserLoginRequest::user :123456 psw:123456
-2023-08-20 23:48:51,281 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2023-08-20 23:48:51,282 [ 1] INFO  Unity: LoadLevel: CharSelect
-2023-08-20 23:48:52,205 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-20 23:48:52,206 [ 1] INFO  Unity: DataManager > DataManager()
-2023-08-20 23:48:53,080 [ 1] INFO  Unity: Select Char:[12]≤‚ ‘1[Warrior]
-2023-08-20 23:48:54,153 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2023-08-20 23:48:54,176 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2023-08-20 23:48:54,190 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
-2023-08-20 23:48:54,192 [ 1] INFO  Unity: AddCharacter:12:≤‚ ‘1 Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-08-20 23:48:54,196 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-08-20 23:48:54,197 [ 1] INFO  Unity: OnCharacterEnter:1
-2023-08-20 23:48:54,198 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-08-20 23:48:55,205 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-20 23:48:55,653 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-20 23:48:57,968 [ 1] INFO  Unity: SetDirection:(98, 18, 0)
-2023-08-20 23:48:58,061 [ 1] INFO  Unity: SetDirection:(93, 36, 0)
-2023-08-20 23:48:58,182 [ 1] INFO  Unity: SetDirection:(85, 53, 0)
-2023-08-20 23:48:58,735 [ 1] INFO  Unity: MoveForward
-2023-08-20 23:48:58,743 [ 1] INFO  Unity: MoveForward
-2023-08-20 23:48:58,897 [ 1] INFO  Unity: SetPosition:(5047, 4029, 806)
-2023-08-20 23:48:59,069 [ 1] INFO  Unity: SetPosition:(5089, 4056, 806)
-2023-08-20 23:48:59,232 [ 1] INFO  Unity: SetPosition:(5132, 4082, 806)
-2023-08-20 23:48:59,423 [ 1] INFO  Unity: Stop
-2023-08-20 23:48:59,424 [ 1] INFO  Unity: Stop
-2023-08-20 23:48:59,425 [ 1] INFO  Unity: SetPosition:(5175, 4109, 806)
-2023-08-20 23:49:08,282 [ 1] INFO  Unity: MoveForward
-2023-08-20 23:49:08,282 [ 1] INFO  Unity: MoveForward
-2023-08-20 23:49:08,448 [ 1] INFO  Unity: SetPosition:(5221, 4138, 806)
-2023-08-20 23:49:08,632 [ 1] INFO  Unity: SetPosition:(5268, 4167, 806)
-2023-08-20 23:49:08,669 [ 1] INFO  Unity: Stop
-2023-08-20 23:49:08,669 [ 1] INFO  Unity: Stop
-2023-08-20 23:49:26,270 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
-2023-08-20 23:49:26,272 [ 1] INFO  Unity: AddCharacter:13:≤‚ ‘∂˛ Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-08-20 23:49:26,328 [ 1] INFO  Unity: OnCharacterEnter:1
-2023-08-20 23:49:26,329 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-08-20 23:49:26,779 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-20 23:49:38,363 [ 1] INFO  Unity: SetDirection:(74, 67, 0)
-2023-08-20 23:49:38,489 [ 1] INFO  Unity: SetDirection:(98, 19, 0)
-2023-08-20 23:49:38,521 [ 1] INFO  Unity: SetDirection:(60, 80, 0)
-2023-08-20 23:49:38,586 [ 1] INFO  Unity: SetDirection:(93, 37, 0)
-2023-08-20 23:49:38,616 [ 1] INFO  Unity: SetDirection:(43, 90, 0)
-2023-08-20 23:49:38,689 [ 1] INFO  Unity: SetDirection:(83, 55, 0)
-2023-08-20 23:49:38,701 [ 1] INFO  Unity: SetDirection:(26, 96, 0)
-2023-08-20 23:49:38,771 [ 1] INFO  Unity: SetDirection:(72, 69, 0)
-2023-08-20 23:49:38,802 [ 1] INFO  Unity: SetDirection:(6, 100, 0)
-2023-08-20 23:49:38,867 [ 1] INFO  Unity: SetDirection:(57, 82, 0)
-2023-08-20 23:49:38,892 [ 1] INFO  Unity: SetDirection:(-12, 99, 0)
-2023-08-20 23:49:38,949 [ 1] INFO  Unity: SetDirection:(41, 91, 0)
-2023-08-20 23:49:38,988 [ 1] INFO  Unity: SetDirection:(-32, 95, 0)
-2023-08-20 23:49:39,071 [ 1] INFO  Unity: SetDirection:(22, 97, 0)
-2023-08-20 23:49:39,104 [ 1] INFO  Unity: SetDirection:(-48, 88, 0)
-2023-08-20 23:49:39,892 [ 1] INFO  Unity: SetDirection:(4, 100, 0)
-2023-08-20 23:49:39,933 [ 1] INFO  Unity: SetDirection:(-63, 77, 0)
-2023-08-20 23:49:40,040 [ 1] INFO  Unity: SetDirection:(-14, 99, 0)
-2023-08-20 23:49:40,073 [ 1] INFO  Unity: SetDirection:(-77, 64, 0)
-2023-08-20 23:49:40,173 [ 1] INFO  Unity: SetDirection:(-33, 95, 0)
-2023-08-20 23:49:40,225 [ 1] INFO  Unity: SetDirection:(-87, 49, 0)
-2023-08-20 23:49:40,978 [ 1] INFO  Unity: SetDirection:(-76, 65, 0)
-2023-08-20 23:49:40,989 [ 1] INFO  Unity: SetDirection:(-15, 99, 0)
-2023-08-20 23:49:41,070 [ 1] INFO  Unity: SetDirection:(-62, 78, 0)
-2023-08-20 23:49:41,093 [ 1] INFO  Unity: SetDirection:(5, 100, 0)
-2023-08-20 23:49:41,190 [ 1] INFO  Unity: SetDirection:(-46, 89, 0)
-2023-08-20 23:49:41,210 [ 1] INFO  Unity: SetDirection:(23, 97, 0)
-2023-08-20 23:49:45,763 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
-2023-08-20 23:49:45,764 [ 1] INFO  Unity: AddCharacter:13:≤‚ ‘∂˛ Map:1 Entity:(3:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-08-20 23:49:45,767 [ 1] INFO  Unity: OnCharacterEnter:1
-2023-08-20 23:49:45,768 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-08-20 23:49:46,207 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-20 23:49:50,359 [ 1] INFO  Unity: MoveForward
-2023-08-20 23:49:50,359 [ 1] INFO  Unity: MoveForward
-2023-08-20 23:49:50,360 [ 1] INFO  Unity: MoveForward
-2023-08-20 23:49:50,361 [ 1] INFO  Unity: MoveForward
-2023-08-20 23:49:50,362 [ 1] INFO  Unity: MoveForward
-2023-08-20 23:49:50,363 [ 1] INFO  Unity: MoveForward
-2023-08-20 23:49:50,363 [ 1] INFO  Unity: MoveForward
-2023-08-20 23:49:50,411 [ 1] INFO  Unity: SetPosition:(5020, 4000, 804)
-2023-08-20 23:49:50,422 [ 1] INFO  Unity: SetPosition:(5261, 4192, 806)
-2023-08-20 23:49:50,455 [ 1] INFO  Unity: SetPosition:(5008, 4034, 804)
-2023-08-20 23:49:50,477 [ 1] INFO  Unity: SetPosition:(5040, 4000, 804)
-2023-08-20 23:49:50,488 [ 1] INFO  Unity: SetPosition:(5252, 4210, 806)
-2023-08-20 23:49:50,538 [ 1] INFO  Unity: SetPosition:(5014, 4058, 804)
-2023-08-20 23:49:50,539 [ 1] INFO  Unity: SetPosition:(5060, 4000, 804)
-2023-08-20 23:49:50,551 [ 1] INFO  Unity: SetPosition:(5243, 4228, 806)
-2023-08-20 23:49:50,605 [ 1] INFO  Unity: SetPosition:(5080, 4000, 804)
-2023-08-20 23:49:50,625 [ 1] INFO  Unity: SetPosition:(5233, 4246, 806)
-2023-08-20 23:49:50,626 [ 1] INFO  Unity: SetPosition:(5020, 4083, 804)
-2023-08-20 23:49:50,668 [ 1] INFO  Unity: SetPosition:(5100, 4000, 804)
-2023-08-20 23:49:50,690 [ 1] INFO  Unity: SetPosition:(5224, 4264, 806)
-2023-08-20 23:49:50,710 [ 1] INFO  Unity: SetPosition:(5025, 4107, 804)
-2023-08-20 23:49:50,741 [ 1] INFO  Unity: SetPosition:(5120, 4000, 804)
-2023-08-20 23:49:50,760 [ 1] INFO  Unity: SetPosition:(5215, 4281, 806)
-2023-08-20 23:49:50,792 [ 1] INFO  Unity: SetPosition:(5031, 4131, 804)
-2023-08-20 23:49:50,807 [ 1] INFO  Unity: SetPosition:(5140, 4000, 804)
-2023-08-20 23:49:50,829 [ 1] INFO  Unity: SetPosition:(5206, 4299, 806)
-2023-08-20 23:49:50,877 [ 1] INFO  Unity: SetPosition:(5037, 4155, 804)
-2023-08-20 23:49:50,877 [ 1] INFO  Unity: SetPosition:(5160, 4000, 804)
-2023-08-20 23:49:50,886 [ 1] INFO  Unity: SetPosition:(5196, 4317, 806)
-2023-08-20 23:49:50,941 [ 1] INFO  Unity: SetPosition:(5180, 4000, 804)
-2023-08-20 23:49:50,951 [ 1] INFO  Unity: Stop
-2023-08-20 23:49:50,953 [ 1] INFO  Unity: Stop
-2023-08-20 23:49:50,953 [ 1] INFO  Unity: Stop
-2023-08-20 23:49:50,954 [ 1] INFO  Unity: Stop
-2023-08-20 23:49:50,954 [ 1] INFO  Unity: Stop
-2023-08-20 23:49:50,954 [ 1] INFO  Unity: Stop
-2023-08-20 23:49:50,955 [ 1] INFO  Unity: Stop
-2023-08-20 23:49:50,956 [ 1] INFO  Unity: SetPosition:(5041, 4175, 804)
-2023-08-20 23:50:04,427 [ 1] INFO  Unity: Character_12_≤‚ ‘1 OnDestroy :ID:1 POS:(5170, 4369, 806) DIR:(-46, 89, 0) SPD:0 
-2023-08-20 23:50:04,428 [ 1] INFO  Unity: Character_13_≤‚ ‘∂˛ OnDestroy :ID:3 POS:(5185, 4000, 804) DIR:(100, 0, 0) SPD:0 
-2023-08-20 23:50:04,429 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-08-20 23:50:04,430 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-08-27 16:42:53,636 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-08-27 16:42:53,888 [ 1] INFO  Unity: UserLoginRequest::user :123456 psw:123456
+2023-08-27 16:42:54,317 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2023-08-27 16:42:54,328 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-08-27 16:42:54,660 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-08-27 16:42:54,668 [ 1] INFO  Unity: DataManager > DataManager()
+2023-08-27 16:42:56,025 [ 1] INFO  Unity: Select Char:[12]≤‚ ‘1[Warrior]
+2023-08-27 16:42:56,879 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2023-08-27 16:42:56,916 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2023-08-27 16:42:56,920 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
+2023-08-27 16:42:56,931 [ 1] INFO  Unity: AddCharacter:2:≤‚ ‘1 Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-08-27 16:42:56,944 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-08-27 16:42:56,946 [ 1] INFO  Unity: OnCharacterEnter:1
+2023-08-27 16:42:56,947 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-08-27 16:42:57,527 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2023-08-27 16:42:57,534 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2023-08-27 16:42:57,668 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-08-27 16:42:57,697 [ 1] INFO  Unity: UIMinimap Start: minimapBoundingBox is not null
+2023-08-27 16:43:00,513 [ 1] INFO  Unity: Getting MinimapBoundingBox value: null
+2023-08-27 16:43:02,172 [ 1] WARN  Unity: UpdateMap.minimapBoundingBox is null or destroyed!
 UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+UIMinimap:UpdateMap() (at Assets/Scripts/UI/Minimap/UIMinimap.cs:35)
+UIMinimap:Start() (at Assets/Scripts/UI/Minimap/UIMinimap.cs:22)
 
-2023-08-20 23:50:04,433 [ 1] INFO  Unity: Character_12_≤‚ ‘1 OnDestroy :ID:1 POS:(5170, 4369, 806) DIR:(-46, 89, 0) SPD:0 
-2023-08-20 23:50:04,433 [ 1] INFO  Unity: Character_13_≤‚ ‘∂˛ OnDestroy :ID:2 POS:(5041, 4175, 804) DIR:(23, 97, 0) SPD:0 
-2023-08-20 23:50:04,433 [ 1] INFO  Unity: Character_13_≤‚ ‘∂˛ OnDestroy :ID:3 POS:(5185, 4000, 804) DIR:(100, 0, 0) SPD:0 
-2023-08-20 23:50:04,436 [ 1] INFO  Unity: Character_12_≤‚ ‘1 OnDestroy :ID:1 POS:(5170, 4369, 806) DIR:(-46, 89, 0) SPD:0 
-2023-08-20 23:50:04,437 [ 1] INFO  Unity: Character_13_≤‚ ‘∂˛ OnDestroy :ID:2 POS:(5041, 4175, 804) DIR:(23, 97, 0) SPD:0 
-2023-08-20 23:50:04,438 [ 1] INFO  Unity: Character_13_≤‚ ‘∂˛ OnDestroy :ID:3 POS:(5185, 4000, 804) DIR:(100, 0, 0) SPD:0 
-2023-08-20 23:50:04,439 [ 1] INFO  Unity: Character_12_≤‚ ‘1 OnDestroy :ID:1 POS:(5170, 4369, 806) DIR:(-46, 89, 0) SPD:0 
-2023-08-20 23:50:04,439 [ 1] INFO  Unity: Character_13_≤‚ ‘∂˛ OnDestroy :ID:2 POS:(5041, 4175, 804) DIR:(23, 97, 0) SPD:0 
-2023-08-20 23:50:04,440 [ 1] INFO  Unity: Character_13_≤‚ ‘∂˛ OnDestroy :ID:3 POS:(5185, 4000, 804) DIR:(100, 0, 0) SPD:0 
+2023-08-27 16:43:07,766 [ 1] INFO  Unity: MinimapBoundingBox value: not null
+2023-08-27 16:43:09,492 [ 1] INFO  Unity: Getting MinimapBoundingBox value: not null
+2023-08-27 16:43:22,142 [ 1] INFO  Unity: Getting MinimapBoundingBox value: not null
+2023-08-27 16:43:25,365 [ 1] INFO  Unity: Getting MinimapBoundingBox value: not null
+2023-08-27 16:43:27,003 [ 1] INFO  Unity: Getting MinimapBoundingBox value: not null
