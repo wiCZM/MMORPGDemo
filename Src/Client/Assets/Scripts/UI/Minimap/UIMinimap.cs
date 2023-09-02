@@ -17,7 +17,6 @@ public class UIMinimap : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("UIMinimap Start: minimapBoundingBox is " + (minimapBoundingBox == null ? "null" : "not null"));
         MinimapManager.Instance.minimap = this;
         this.UpdateMap();
     }
@@ -30,11 +29,6 @@ public class UIMinimap : MonoBehaviour
         this.minimap.SetNativeSize();
         this.minimap.transform.localPosition = Vector3.zero;
         this.minimapBoundingBox = MinimapManager.Instance.MinimapBoundingBox;
-        if (minimapBoundingBox == null)
-        {
-            Debug.LogWarning("UpdateMap.minimapBoundingBox is null or destroyed!");
-            return;
-        }
         this.playerTransform = null;
     }
 
@@ -51,7 +45,6 @@ public class UIMinimap : MonoBehaviour
 
         if (minimapBoundingBox == null)
         {
-            Debug.LogWarning("Update.minimapBoundingBox is null or destroyed!");
             return;
         }
 

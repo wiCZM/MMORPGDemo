@@ -1,38 +1,58 @@
-2023-08-27 16:41:10,244 [ 1] INFO  Unity: LoadingManager start
-2023-08-27 16:42:53,608 [ 1] INFO  Unity: UserLoginRequest::user :123456 psw:123456
-2023-08-27 16:42:53,620 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-08-27 16:42:53,621 [ 1] INFO  Unity: DoConnect
-2023-08-27 16:42:53,624 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
-2023-08-27 16:42:53,626 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
+2023-09-02 11:09:59,438 [ 1] INFO  Unity: LoadingManager start
+2023-09-02 11:10:02,618 [ 1] INFO  Unity: DataManager > DataManager()
+2023-09-02 11:10:02,793 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{FormatException: Input string was not in the correct format, System.Int32.Parse (System.String s, NumberStyles style, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:640)
+System.Int32.Parse (System.String s, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:208)
+System.Convert.ToInt32 (System.String value, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:1277)
+System.String.System.IConvertible.ToInt32 (IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:2391)
+System.Convert.ToType (System.Object value, System.Type conversionType, IFormatProvider provider, Boolean try_target_to_type) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2910)
+System.Convert.ChangeType (System.Object value, System.Type conversionType, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2511)
+Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
+Rethrow as JsonSerializationException: Error converting value "ID" to type 'System.Int32'. Path '1.ID', line 3, position 9.
+Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
+Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
+Rethrow as JsonSerializationException: Could not convert string 'ID' to dictionary key type 'System.Int32'. Create a TypeConverter to convert from the string to the key type object. Path '1.ID', line 3, position 9.
+Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
+}</args></log4net.Error>
+2023-09-02 11:11:04,122 [ 1] INFO  Unity: UserLoginRequest::user :12345 psw:12345
+2023-09-02 11:11:04,124 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-09-02 11:11:04,125 [ 1] INFO  Unity: DoConnect
+2023-09-02 11:11:04,127 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-09-02 11:11:04,129 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
 
-2023-08-27 16:42:53,636 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-08-27 16:42:53,888 [ 1] INFO  Unity: UserLoginRequest::user :123456 psw:123456
-2023-08-27 16:42:54,317 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2023-08-27 16:42:54,328 [ 1] INFO  Unity: LoadLevel: CharSelect
-2023-08-27 16:42:54,660 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-27 16:42:54,668 [ 1] INFO  Unity: DataManager > DataManager()
-2023-08-27 16:42:56,025 [ 1] INFO  Unity: Select Char:[12]≤‚ ‘1[Warrior]
-2023-08-27 16:42:56,879 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2023-08-27 16:42:56,916 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2023-08-27 16:42:56,920 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
-2023-08-27 16:42:56,931 [ 1] INFO  Unity: AddCharacter:2:≤‚ ‘1 Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-08-27 16:42:56,944 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-08-27 16:42:56,946 [ 1] INFO  Unity: OnCharacterEnter:1
-2023-08-27 16:42:56,947 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-08-27 16:42:57,527 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2023-09-02 11:11:04,133 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-09-02 11:11:04,635 [ 1] INFO  Unity: UserLoginRequest::user :12345 psw:12345
+2023-09-02 11:11:04,684 [ 1] INFO  Unity: ProcessSend exception:System.InvalidOperationException: Duplicate field-number detected; 9 on: SkillBridge.Message.NetMessageRequest
+at ProtoBuf.Serializers.TypeSerializer..ctor (ProtoBuf.Meta.TypeModel,System.Type,int[],ProtoBuf.Serializers.IProtoSerializer[],System.Reflection.MethodInfo[],bool,bool,ProtoBuf.Meta.CallbackSet,System.Type,System.Reflection.MethodInfo) <IL 0x00049, 0x00277>
+at ProtoBuf.Meta.MetaType.BuildSerializer () <IL 0x00315, 0x019bc>
+at ProtoBuf.Meta.MetaType.get_Serializer () <IL 0x0002a, 0x00149>
+at ProtoBuf.Meta.RuntimeTypeModel.Serialize (int,object,ProtoBuf.ProtoWriter) <IL 0x00011, 0x000c2>
+at ProtoBuf.ProtoWriter.WriteObject (object,int,ProtoBuf.ProtoWriter) <IL 0x00036, 0x0021a>
+at (wrapper dynamic-method) SkillBridge.Message.NetMessage.proto_1 (object,ProtoBuf.ProtoWriter) <IL 0x00050, 0x001ee>
+at ProtoBuf.Serializers.CompiledSerializer.ProtoBuf.Serializers.IProtoSerializer.Write (object,ProtoBuf.ProtoWriter) <IL 0x00008, 0x0005c>
+at ProtoBuf.Meta.RuntimeTypeModel.Serialize (int,object,ProtoBuf.ProtoWriter) <IL 0x00018, 0x000f1>
+at ProtoBuf.Meta.TypeModel.SerializeCore (ProtoBuf.ProtoWriter,object) <IL 0x00026, 0x0019c>
+at ProtoBuf.Meta.TypeModel.Serialize (System.IO.Stream,object,ProtoBuf.SerializationContext) <IL 0x00013, 0x000e7>
+at ProtoBuf.Meta.TypeModel.Serialize (System.IO.Stream,object) <IL 0x00004, 0x0005f>
+at ProtoBuf.Serializer.Serialize<SkillBridge.Message.NetMessage> (System.IO.Stream,SkillBridge.Message.NetMessage) <0x000a2>
+at Network.PackageHandler`1<object>.PackMessage (SkillBridge.Message.NetMessage) [0x0000a] in D:\T2\Unity\Demo\Mymmorpg\Src\Lib\Common\Network\PackageHandler.cs:91
+at Network.NetClient.ProcessSend () [0x0013e] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:403
 
-2023-08-27 16:42:57,534 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2023-08-27 16:42:57,668 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-27 16:42:57,697 [ 1] INFO  Unity: UIMinimap Start: minimapBoundingBox is not null
-2023-08-27 16:43:00,513 [ 1] INFO  Unity: Getting MinimapBoundingBox value: null
-2023-08-27 16:43:02,172 [ 1] WARN  Unity: UpdateMap.minimapBoundingBox is null or destroyed!
+2023-09-02 11:11:04,685 [ 1] WARN  Unity: CloseConnection(), errorCode: 1000
 UnityEngine.Debug:LogWarning(Object)
-UIMinimap:UpdateMap() (at Assets/Scripts/UI/Minimap/UIMinimap.cs:35)
-UIMinimap:Start() (at Assets/Scripts/UI/Minimap/UIMinimap.cs:22)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:ProcessSend() (at Assets/Scripts/Network/NetClient.cs:412)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
 
-2023-08-27 16:43:07,766 [ 1] INFO  Unity: MinimapBoundingBox value: not null
-2023-08-27 16:43:09,492 [ 1] INFO  Unity: Getting MinimapBoundingBox value: not null
-2023-08-27 16:43:22,142 [ 1] INFO  Unity: Getting MinimapBoundingBox value: not null
-2023-08-27 16:43:25,365 [ 1] INFO  Unity: Getting MinimapBoundingBox value: not null
-2023-08-27 16:43:27,003 [ 1] INFO  Unity: Getting MinimapBoundingBox value: not null
+2023-09-02 11:11:04,693 [ 1] INFO  Unity: DoConnect
+2023-09-02 11:11:04,693 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-09-02 11:11:04,694 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
+
+2023-09-02 11:11:04,694 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-09-02 11:11:08,890 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-09-02 11:11:08,891 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+

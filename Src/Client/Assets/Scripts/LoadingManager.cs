@@ -6,6 +6,7 @@ using System.IO;
 using SkillBridge.Message;
 using ProtoBuf;
 using Services;
+using Managers;
 
 public class LoadingManager : MonoBehaviour {
 
@@ -43,13 +44,13 @@ public class LoadingManager : MonoBehaviour {
         yield return new WaitForSeconds(1f);
         UITips.SetActive(false);
 
-        //yield return DataManager.Instance.LoadData();
+        StartCoroutine(DataManager.Instance.LoadData());
 
         //Init basic services
         MapService.Instance.Init();
         UserService.Instance.Init();
 
-
+        TestManager.Instance.Init();
         // Fake Loading Simulate
         for (float i = 0; i < 1;)
         {

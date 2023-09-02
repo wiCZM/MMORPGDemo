@@ -13,8 +13,7 @@ namespace Managers
         private Collider minimapBoundingBox;
         public Collider MinimapBoundingBox
         {
-            get { Debug.Log("Getting MinimapBoundingBox value: " + (minimapBoundingBox == null ? "null" : "not null"));
-                return minimapBoundingBox; }
+            get { return minimapBoundingBox; }
         }
 
         public Transform PlayerTransform
@@ -30,26 +29,16 @@ namespace Managers
         {
             return Resloader.Load<Sprite>("UI/Minimap/" + User.Instance.CurrentMapData.MiniMap);
         }
-        void Start()
-        {
-            Debug.Log("MinimapManager Start: minimapBoundingBox is " + (minimapBoundingBox == null ? "null" : "not null"));
-        }
-
 
         public void UpdateMinimap(Collider minimapBoundingBox)
         {
-            Debug.Log("MinimapBoundingBox value: " + (minimapBoundingBox == null ? "null" : "not null"));
-
             this.minimapBoundingBox = minimapBoundingBox;
             if (this.minimap != null)
                 this.minimap.UpdateMap();
             if (minimapBoundingBox == null)
             {
-                Debug.LogWarning("UpdateMinimap.minimapBoundingBox is null or destroyed!");
                 return;
             }
-            Debug.Log("MinimapBoundingBox value: " + (minimapBoundingBox == null ? "null" : "not null"));
-
         }
     }
 }

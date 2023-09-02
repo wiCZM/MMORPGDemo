@@ -1,37 +1,255 @@
-2023-08-27 15:43:53,859 [ 1] INFO  Unity: LoadingManager start
-2023-08-27 15:44:21,559 [ 1] INFO  Unity: UserLoginRequest::user :123456 psw:123456
-2023-08-27 15:44:21,570 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-08-27 15:44:21,572 [ 1] INFO  Unity: DoConnect
-2023-08-27 15:44:21,574 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
-2023-08-27 15:44:21,579 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
+2023-08-31 18:29:39,086 [ 1] INFO  Unity: LoadingManager start
+2023-08-31 18:29:42,333 [ 1] INFO  Unity: DataManager > DataManager()
+2023-08-31 18:29:42,525 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{FormatException: Input string was not in the correct format, System.Int32.Parse (System.String s, NumberStyles style, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:640)
+System.Int32.Parse (System.String s, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:208)
+System.Convert.ToInt32 (System.String value, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:1277)
+System.String.System.IConvertible.ToInt32 (IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:2391)
+System.Convert.ToType (System.Object value, System.Type conversionType, IFormatProvider provider, Boolean try_target_to_type) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2910)
+System.Convert.ChangeType (System.Object value, System.Type conversionType, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2511)
+Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
+Rethrow as JsonSerializationException: Error converting value "ID" to type 'System.Int32'. Path '1.ID', line 3, position 9.
+Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
+Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
+Rethrow as JsonSerializationException: Could not convert string 'ID' to dictionary key type 'System.Int32'. Create a TypeConverter to convert from the string to the key type object. Path '1.ID', line 3, position 9.
+Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
+}</args></log4net.Error>
+2023-08-31 18:29:53,584 [ 1] INFO  Unity: UserLoginRequest::user :12345 psw:12345
+2023-08-31 18:29:53,586 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-08-31 18:29:53,587 [ 1] INFO  Unity: DoConnect
+2023-08-31 18:29:53,588 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-08-31 18:29:53,591 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
 
-2023-08-27 15:44:21,590 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-08-27 15:44:21,704 [ 1] INFO  Unity: UserLoginRequest::user :123456 psw:123456
-2023-08-27 15:44:22,125 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2023-08-27 15:44:22,131 [ 1] INFO  Unity: LoadLevel: CharSelect
-2023-08-27 15:44:22,486 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-27 15:44:22,493 [ 1] INFO  Unity: DataManager > DataManager()
-2023-08-27 15:44:23,295 [ 1] INFO  Unity: Select Char:[12]测试1[Warrior]
-2023-08-27 15:44:24,754 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2023-08-27 15:44:24,792 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2023-08-27 15:44:24,796 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
-2023-08-27 15:44:24,806 [ 1] INFO  Unity: AddCharacter:7:测试1 Map:1 Entity:(7:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-08-27 15:44:24,817 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-08-27 15:44:24,818 [ 1] INFO  Unity: OnCharacterEnter:1
-2023-08-27 15:44:24,819 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-08-27 15:44:25,386 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2023-08-31 18:29:53,594 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-08-31 18:29:53,875 [ 1] INFO  Unity: UserLoginRequest::user :12345 psw:12345
+2023-08-31 18:29:53,925 [ 1] INFO  Unity: ProcessSend exception:System.InvalidOperationException: Duplicate field-number detected; 9 on: SkillBridge.Message.NetMessageRequest
+at ProtoBuf.Serializers.TypeSerializer..ctor (ProtoBuf.Meta.TypeModel,System.Type,int[],ProtoBuf.Serializers.IProtoSerializer[],System.Reflection.MethodInfo[],bool,bool,ProtoBuf.Meta.CallbackSet,System.Type,System.Reflection.MethodInfo) <IL 0x00049, 0x00277>
+at ProtoBuf.Meta.MetaType.BuildSerializer () <IL 0x00315, 0x019bc>
+at ProtoBuf.Meta.MetaType.get_Serializer () <IL 0x0002a, 0x00149>
+at ProtoBuf.Meta.RuntimeTypeModel.Serialize (int,object,ProtoBuf.ProtoWriter) <IL 0x00011, 0x000c2>
+at ProtoBuf.ProtoWriter.WriteObject (object,int,ProtoBuf.ProtoWriter) <IL 0x00036, 0x0021a>
+at (wrapper dynamic-method) SkillBridge.Message.NetMessage.proto_1 (object,ProtoBuf.ProtoWriter) <IL 0x00050, 0x001ee>
+at ProtoBuf.Serializers.CompiledSerializer.ProtoBuf.Serializers.IProtoSerializer.Write (object,ProtoBuf.ProtoWriter) <IL 0x00008, 0x0005c>
+at ProtoBuf.Meta.RuntimeTypeModel.Serialize (int,object,ProtoBuf.ProtoWriter) <IL 0x00018, 0x000f1>
+at ProtoBuf.Meta.TypeModel.SerializeCore (ProtoBuf.ProtoWriter,object) <IL 0x00026, 0x0019c>
+at ProtoBuf.Meta.TypeModel.Serialize (System.IO.Stream,object,ProtoBuf.SerializationContext) <IL 0x00013, 0x000e7>
+at ProtoBuf.Meta.TypeModel.Serialize (System.IO.Stream,object) <IL 0x00004, 0x0005f>
+at ProtoBuf.Serializer.Serialize<SkillBridge.Message.NetMessage> (System.IO.Stream,SkillBridge.Message.NetMessage) <0x000a2>
+at Network.PackageHandler`1<object>.PackMessage (SkillBridge.Message.NetMessage) [0x0000a] in D:\T2\Unity\Demo\Mymmorpg\Src\Lib\Common\Network\PackageHandler.cs:91
+at Network.NetClient.ProcessSend () [0x0013e] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:403
 
-2023-08-27 15:44:25,393 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2023-08-27 15:44:25,530 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-27 15:47:52,577 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-27 15:54:30,400 [ 1] WARN  Unity: Assets/Scripts/GameObject/MainPlayerCamera.cs(8,19): warning CS0108: `MainPlayerCamera.camera' hides inherited member `UnityEngine.Component.camera'. Use the new keyword if hiding was intended
+2023-08-31 18:29:53,926 [ 1] WARN  Unity: CloseConnection(), errorCode: 1000
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:ProcessSend() (at Assets/Scripts/Network/NetClient.cs:412)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
 
-2023-08-27 15:54:30,400 [ 1] WARN  Unity: Assets/Scripts/GameObject/EntityController.cs(19,16): warning CS0649: Field `EntityController.rotation' is never assigned to, and will always have its default value
+2023-08-31 18:29:53,939 [ 1] INFO  Unity: DoConnect
+2023-08-31 18:29:53,940 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-08-31 18:29:53,941 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
 
-2023-08-27 15:54:30,401 [ 1] WARN  Unity: Assets/Scripts/GameObject/EntityController.cs(22,16): warning CS0414: The private field `EntityController.lastRotation' is assigned but its value is never used
+2023-08-31 18:29:53,941 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-08-31 18:29:57,713 [ 1] INFO  Unity: UserLoginRequest::user :12345 psw:12345
+2023-08-31 18:29:57,714 [ 1] INFO  Unity: ProcessSend exception:System.InvalidOperationException: Duplicate field-number detected; 9 on: SkillBridge.Message.NetMessageRequest
+at ProtoBuf.Serializers.TypeSerializer..ctor (ProtoBuf.Meta.TypeModel,System.Type,int[],ProtoBuf.Serializers.IProtoSerializer[],System.Reflection.MethodInfo[],bool,bool,ProtoBuf.Meta.CallbackSet,System.Type,System.Reflection.MethodInfo) <IL 0x00049, 0x00277>
+at ProtoBuf.Meta.MetaType.BuildSerializer () <IL 0x00315, 0x019bc>
+at ProtoBuf.Meta.MetaType.get_Serializer () <IL 0x0002a, 0x00149>
+at ProtoBuf.Meta.RuntimeTypeModel.Serialize (int,object,ProtoBuf.ProtoWriter) <IL 0x00011, 0x000c2>
+at ProtoBuf.ProtoWriter.WriteObject (object,int,ProtoBuf.ProtoWriter) <IL 0x00036, 0x0021a>
+at (wrapper dynamic-method) SkillBridge.Message.NetMessage.proto_1 (object,ProtoBuf.ProtoWriter) <IL 0x00050, 0x001ee>
+at ProtoBuf.Serializers.CompiledSerializer.ProtoBuf.Serializers.IProtoSerializer.Write (object,ProtoBuf.ProtoWriter) <IL 0x00008, 0x0005c>
+at ProtoBuf.Meta.RuntimeTypeModel.Serialize (int,object,ProtoBuf.ProtoWriter) <IL 0x00018, 0x000f1>
+at ProtoBuf.Meta.TypeModel.SerializeCore (ProtoBuf.ProtoWriter,object) <IL 0x00026, 0x0019c>
+at ProtoBuf.Meta.TypeModel.Serialize (System.IO.Stream,object,ProtoBuf.SerializationContext) <IL 0x00013, 0x000e7>
+at ProtoBuf.Meta.TypeModel.Serialize (System.IO.Stream,object) <IL 0x00004, 0x0005f>
+at ProtoBuf.Serializer.Serialize<SkillBridge.Message.NetMessage> (System.IO.Stream,SkillBridge.Message.NetMessage) <0x000a2>
+at Network.PackageHandler`1<object>.PackMessage (SkillBridge.Message.NetMessage) [0x0000a] in D:\T2\Unity\Demo\Mymmorpg\Src\Lib\Common\Network\PackageHandler.cs:91
+at Network.NetClient.ProcessSend () [0x0013e] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:403
 
-2023-08-27 15:54:30,402 [ 1] WARN  Unity: Assets/Scripts/GameObject/PlayerInputController.cs(111,11): warning CS0414: The private field `PlayerInputController.lastSync' is assigned but its value is never used
 
-2023-08-27 15:54:30,403 [ 1] WARN  Unity: Assets/Editor/MapTools.cs(24,32): warning CS0219: The variable `allTeleporters' is assigned but its value is never used
+2023-08-31 18:29:57,715 [ 1] WARN  Unity: CloseConnection(), errorCode: 1000
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:ProcessSend() (at Assets/Scripts/Network/NetClient.cs:412)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
+
+2023-08-31 18:29:57,721 [ 1] INFO  Unity: DoConnect
+2023-08-31 18:29:57,722 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-08-31 18:29:57,723 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
+
+2023-08-31 18:29:57,724 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-08-31 18:31:02,141 [ 1] INFO  Unity: UserLoginRequest::user :12345 psw:12345
+2023-08-31 18:31:02,143 [ 1] INFO  Unity: UserLoginRequest::user :12345 psw:12345
+2023-08-31 18:31:02,144 [ 1] INFO  Unity: ProcessSend exception:System.InvalidOperationException: Duplicate field-number detected; 9 on: SkillBridge.Message.NetMessageRequest
+at ProtoBuf.Serializers.TypeSerializer..ctor (ProtoBuf.Meta.TypeModel,System.Type,int[],ProtoBuf.Serializers.IProtoSerializer[],System.Reflection.MethodInfo[],bool,bool,ProtoBuf.Meta.CallbackSet,System.Type,System.Reflection.MethodInfo) <IL 0x00049, 0x00277>
+at ProtoBuf.Meta.MetaType.BuildSerializer () <IL 0x00315, 0x019bc>
+at ProtoBuf.Meta.MetaType.get_Serializer () <IL 0x0002a, 0x00149>
+at ProtoBuf.Meta.RuntimeTypeModel.Serialize (int,object,ProtoBuf.ProtoWriter) <IL 0x00011, 0x000c2>
+at ProtoBuf.ProtoWriter.WriteObject (object,int,ProtoBuf.ProtoWriter) <IL 0x00036, 0x0021a>
+at (wrapper dynamic-method) SkillBridge.Message.NetMessage.proto_1 (object,ProtoBuf.ProtoWriter) <IL 0x00050, 0x001ee>
+at ProtoBuf.Serializers.CompiledSerializer.ProtoBuf.Serializers.IProtoSerializer.Write (object,ProtoBuf.ProtoWriter) <IL 0x00008, 0x0005c>
+at ProtoBuf.Meta.RuntimeTypeModel.Serialize (int,object,ProtoBuf.ProtoWriter) <IL 0x00018, 0x000f1>
+at ProtoBuf.Meta.TypeModel.SerializeCore (ProtoBuf.ProtoWriter,object) <IL 0x00026, 0x0019c>
+at ProtoBuf.Meta.TypeModel.Serialize (System.IO.Stream,object,ProtoBuf.SerializationContext) <IL 0x00013, 0x000e7>
+at ProtoBuf.Meta.TypeModel.Serialize (System.IO.Stream,object) <IL 0x00004, 0x0005f>
+at ProtoBuf.Serializer.Serialize<SkillBridge.Message.NetMessage> (System.IO.Stream,SkillBridge.Message.NetMessage) <0x000a2>
+at Network.PackageHandler`1<object>.PackMessage (SkillBridge.Message.NetMessage) [0x0000a] in D:\T2\Unity\Demo\Mymmorpg\Src\Lib\Common\Network\PackageHandler.cs:91
+at Network.NetClient.ProcessSend () [0x0013e] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:403
+
+
+2023-08-31 18:31:02,144 [ 1] WARN  Unity: CloseConnection(), errorCode: 1000
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:ProcessSend() (at Assets/Scripts/Network/NetClient.cs:412)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
+
+2023-08-31 18:31:02,152 [ 1] INFO  Unity: DoConnect
+2023-08-31 18:31:02,152 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-08-31 18:31:02,153 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
+
+2023-08-31 18:31:02,154 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-08-31 18:31:03,812 [ 1] INFO  Unity: UserLoginRequest::user :12345 psw:12345
+2023-08-31 18:31:03,813 [ 1] INFO  Unity: UserLoginRequest::user :12345 psw:12345
+2023-08-31 18:31:03,815 [ 1] INFO  Unity: ProcessSend exception:System.InvalidOperationException: Duplicate field-number detected; 9 on: SkillBridge.Message.NetMessageRequest
+at ProtoBuf.Serializers.TypeSerializer..ctor (ProtoBuf.Meta.TypeModel,System.Type,int[],ProtoBuf.Serializers.IProtoSerializer[],System.Reflection.MethodInfo[],bool,bool,ProtoBuf.Meta.CallbackSet,System.Type,System.Reflection.MethodInfo) <IL 0x00049, 0x00277>
+at ProtoBuf.Meta.MetaType.BuildSerializer () <IL 0x00315, 0x019bc>
+at ProtoBuf.Meta.MetaType.get_Serializer () <IL 0x0002a, 0x00149>
+at ProtoBuf.Meta.RuntimeTypeModel.Serialize (int,object,ProtoBuf.ProtoWriter) <IL 0x00011, 0x000c2>
+at ProtoBuf.ProtoWriter.WriteObject (object,int,ProtoBuf.ProtoWriter) <IL 0x00036, 0x0021a>
+at (wrapper dynamic-method) SkillBridge.Message.NetMessage.proto_1 (object,ProtoBuf.ProtoWriter) <IL 0x00050, 0x001ee>
+at ProtoBuf.Serializers.CompiledSerializer.ProtoBuf.Serializers.IProtoSerializer.Write (object,ProtoBuf.ProtoWriter) <IL 0x00008, 0x0005c>
+at ProtoBuf.Meta.RuntimeTypeModel.Serialize (int,object,ProtoBuf.ProtoWriter) <IL 0x00018, 0x000f1>
+at ProtoBuf.Meta.TypeModel.SerializeCore (ProtoBuf.ProtoWriter,object) <IL 0x00026, 0x0019c>
+at ProtoBuf.Meta.TypeModel.Serialize (System.IO.Stream,object,ProtoBuf.SerializationContext) <IL 0x00013, 0x000e7>
+at ProtoBuf.Meta.TypeModel.Serialize (System.IO.Stream,object) <IL 0x00004, 0x0005f>
+at ProtoBuf.Serializer.Serialize<SkillBridge.Message.NetMessage> (System.IO.Stream,SkillBridge.Message.NetMessage) <0x000a2>
+at Network.PackageHandler`1<object>.PackMessage (SkillBridge.Message.NetMessage) [0x0000a] in D:\T2\Unity\Demo\Mymmorpg\Src\Lib\Common\Network\PackageHandler.cs:91
+at Network.NetClient.ProcessSend () [0x0013e] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:403
+
+
+2023-08-31 18:31:03,816 [ 1] WARN  Unity: CloseConnection(), errorCode: 1000
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:ProcessSend() (at Assets/Scripts/Network/NetClient.cs:412)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
+
+2023-08-31 18:31:03,824 [ 1] INFO  Unity: DoConnect
+2023-08-31 18:31:03,824 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-08-31 18:31:03,825 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
+
+2023-08-31 18:31:03,825 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-08-31 18:31:09,909 [ 1] INFO  Unity: UserLoginRequest::user :12345 psw:12345
+2023-08-31 18:31:09,909 [ 1] INFO  Unity: UserLoginRequest::user :12345 psw:12345
+2023-08-31 18:31:09,909 [ 1] INFO  Unity: ProcessSend exception:System.InvalidOperationException: Duplicate field-number detected; 9 on: SkillBridge.Message.NetMessageRequest
+at ProtoBuf.Serializers.TypeSerializer..ctor (ProtoBuf.Meta.TypeModel,System.Type,int[],ProtoBuf.Serializers.IProtoSerializer[],System.Reflection.MethodInfo[],bool,bool,ProtoBuf.Meta.CallbackSet,System.Type,System.Reflection.MethodInfo) <IL 0x00049, 0x00277>
+at ProtoBuf.Meta.MetaType.BuildSerializer () <IL 0x00315, 0x019bc>
+at ProtoBuf.Meta.MetaType.get_Serializer () <IL 0x0002a, 0x00149>
+at ProtoBuf.Meta.RuntimeTypeModel.Serialize (int,object,ProtoBuf.ProtoWriter) <IL 0x00011, 0x000c2>
+at ProtoBuf.ProtoWriter.WriteObject (object,int,ProtoBuf.ProtoWriter) <IL 0x00036, 0x0021a>
+at (wrapper dynamic-method) SkillBridge.Message.NetMessage.proto_1 (object,ProtoBuf.ProtoWriter) <IL 0x00050, 0x001ee>
+at ProtoBuf.Serializers.CompiledSerializer.ProtoBuf.Serializers.IProtoSerializer.Write (object,ProtoBuf.ProtoWriter) <IL 0x00008, 0x0005c>
+at ProtoBuf.Meta.RuntimeTypeModel.Serialize (int,object,ProtoBuf.ProtoWriter) <IL 0x00018, 0x000f1>
+at ProtoBuf.Meta.TypeModel.SerializeCore (ProtoBuf.ProtoWriter,object) <IL 0x00026, 0x0019c>
+at ProtoBuf.Meta.TypeModel.Serialize (System.IO.Stream,object,ProtoBuf.SerializationContext) <IL 0x00013, 0x000e7>
+at ProtoBuf.Meta.TypeModel.Serialize (System.IO.Stream,object) <IL 0x00004, 0x0005f>
+at ProtoBuf.Serializer.Serialize<SkillBridge.Message.NetMessage> (System.IO.Stream,SkillBridge.Message.NetMessage) <0x000a2>
+at Network.PackageHandler`1<object>.PackMessage (SkillBridge.Message.NetMessage) [0x0000a] in D:\T2\Unity\Demo\Mymmorpg\Src\Lib\Common\Network\PackageHandler.cs:91
+at Network.NetClient.ProcessSend () [0x0013e] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:403
+
+
+2023-08-31 18:31:09,911 [ 1] WARN  Unity: CloseConnection(), errorCode: 1000
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:ProcessSend() (at Assets/Scripts/Network/NetClient.cs:412)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
+
+2023-08-31 18:31:09,919 [ 1] INFO  Unity: DoConnect
+2023-08-31 18:31:09,919 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-08-31 18:31:09,920 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
+
+2023-08-31 18:31:09,920 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-08-31 18:32:11,396 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
+
+  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
+  at Network.NetClient.ProcessRecv () [0x00084] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:340 
+
+2023-08-31 18:32:11,396 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:354)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:434)
+
+2023-08-31 18:32:11,409 [ 1] INFO  Unity: DoConnect
+2023-08-31 18:32:11,410 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-08-31 18:32:11,411 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
+
+2023-08-31 18:32:13,456 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+
+2023-08-31 18:32:13,458 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+
+2023-08-31 18:32:13,529 [ 1] INFO  Unity: DoConnect
+2023-08-31 18:32:13,530 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-08-31 18:32:13,531 [ 1] INFO  Unity: Connect[1] to server 10.0.0.100:8000
+
+2023-08-31 18:32:15,570 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+
+2023-08-31 18:32:15,571 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+
+2023-08-31 18:32:15,622 [ 1] INFO  Unity: DoConnect
+2023-08-31 18:32:15,623 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-08-31 18:32:15,624 [ 1] INFO  Unity: Connect[2] to server 10.0.0.100:8000
+
+2023-08-31 18:32:17,656 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+
+2023-08-31 18:32:17,657 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+
+2023-08-31 18:32:17,658 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :1 reason:Cannot connect to server
+2023-08-31 18:32:17,743 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-08-31 18:32:17,743 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 

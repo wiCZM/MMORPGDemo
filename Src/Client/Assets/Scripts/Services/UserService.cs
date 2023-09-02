@@ -8,6 +8,7 @@ using UnityEngine;
 
 using SkillBridge.Message;
 using Models;
+using Managers;
 
 namespace Services
 {
@@ -210,8 +211,6 @@ namespace Services
         private void OnCharacterEnter(object sender, MapCharacterEnterResponse message)
         {
             Debug.LogFormat("OnCharacterEnter:{0}", message.mapId);
-            //NCharacterInfo info = message.Characters[0];//会导致出现每次新角色一进入,就会把新角色的id分发给全部账号,而不是单纯的信息通知
-            //User.Instance.CurrentCharacter = info;
             SceneManager.Instance.LoadScene(DataManager.Instance.Maps[message.mapId].Resource);
         }
 
@@ -248,7 +247,11 @@ namespace Services
 
             if (response.Result == Result.Success)
             {
-
+                if (response.Character != null)
+                {
+                    ItemManager.Instance.Init(response.Character.Items);
+                    BagManager.Instance.Init(response.Character.BagInfo);
+                }
             }
         }
 

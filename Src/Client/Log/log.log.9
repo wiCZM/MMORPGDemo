@@ -1,288 +1,154 @@
-2023-08-27 15:22:49,271 [ 1] INFO  Unity: LoadingManager start
-2023-08-27 15:23:01,817 [ 1] INFO  Unity: UserLoginRequest::user :123456 psw:123456
-2023-08-27 15:23:01,820 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-08-27 15:23:01,821 [ 1] INFO  Unity: DoConnect
-2023-08-27 15:23:01,822 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
-2023-08-27 15:23:01,825 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
+2023-08-29 21:35:14,286 [ 1] INFO  Unity: LoadingManager start
+2023-08-29 21:35:17,498 [ 1] INFO  Unity: DataManager > DataManager()
+2023-08-29 21:35:17,647 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{FormatException: Input string was not in the correct format, System.Int32.Parse (System.String s, NumberStyles style, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:640)
+System.Int32.Parse (System.String s, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:208)
+System.Convert.ToInt32 (System.String value, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:1277)
+System.String.System.IConvertible.ToInt32 (IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:2391)
+System.Convert.ToType (System.Object value, System.Type conversionType, IFormatProvider provider, Boolean try_target_to_type) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2910)
+System.Convert.ChangeType (System.Object value, System.Type conversionType, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2511)
+Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
+Rethrow as JsonSerializationException: Error converting value "ID" to type 'System.Int32'. Path '1.ID', line 3, position 9.
+Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
+Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
+Rethrow as JsonSerializationException: Could not convert string 'ID' to dictionary key type 'System.Int32'. Create a TypeConverter to convert from the string to the key type object. Path '1.ID', line 3, position 9.
+Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
+}</args></log4net.Error>
+2023-08-29 21:35:38,384 [ 1] INFO  Unity: UserLoginRequest::user :12345 psw:12345
+2023-08-29 21:35:38,385 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-08-29 21:35:38,393 [ 1] INFO  Unity: DoConnect
+2023-08-29 21:35:38,394 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-08-29 21:35:38,396 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
 
-2023-08-27 15:23:01,828 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-08-27 15:23:02,111 [ 1] INFO  Unity: UserLoginRequest::user :123456 psw:123456
-2023-08-27 15:23:02,226 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2023-08-27 15:23:02,227 [ 1] INFO  Unity: LoadLevel: CharSelect
-2023-08-27 15:23:02,466 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-27 15:23:02,467 [ 1] INFO  Unity: DataManager > DataManager()
-2023-08-27 15:23:03,062 [ 1] INFO  Unity: Select Char:[14]哈哈[Wizard]
-2023-08-27 15:23:03,991 [ 1] INFO  Unity: UserGameEnterRequest::characterId :1
-2023-08-27 15:23:04,010 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2023-08-27 15:23:04,012 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
-2023-08-27 15:23:04,014 [ 1] INFO  Unity: AddCharacter:3:哈哈 Map:1 Entity:(3:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-08-27 15:23:04,017 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-08-27 15:23:04,018 [ 1] INFO  Unity: OnCharacterEnter:1
-2023-08-27 15:23:04,020 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-08-27 15:23:04,512 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2023-08-29 21:35:38,399 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-08-29 21:35:38,656 [ 1] INFO  Unity: UserLoginRequest::user :12345 psw:12345
+2023-08-29 21:35:39,252 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2023-08-29 21:35:39,253 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-08-29 21:35:39,546 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-08-29 21:35:39,552 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{FormatException: Input string was not in the correct format, System.Int32.Parse (System.String s, NumberStyles style, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:640)
+System.Int32.Parse (System.String s, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:208)
+System.Convert.ToInt32 (System.String value, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:1277)
+System.String.System.IConvertible.ToInt32 (IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:2391)
+System.Convert.ToType (System.Object value, System.Type conversionType, IFormatProvider provider, Boolean try_target_to_type) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2910)
+System.Convert.ChangeType (System.Object value, System.Type conversionType, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2511)
+Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
+Rethrow as JsonSerializationException: Error converting value "ID" to type 'System.Int32'. Path '1.ID', line 3, position 9.
+Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
+Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
+Rethrow as JsonSerializationException: Could not convert string 'ID' to dictionary key type 'System.Int32'. Create a TypeConverter to convert from the string to the key type object. Path '1.ID', line 3, position 9.
+Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
+}</args></log4net.Error>
+2023-08-29 21:35:40,185 [ 1] INFO  Unity: Select Char:[1]雷电法[Wizard]
+2023-08-29 21:35:40,190 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{FormatException: Input string was not in the correct format, System.Int32.Parse (System.String s, NumberStyles style, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:640)
+System.Int32.Parse (System.String s, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:208)
+System.Convert.ToInt32 (System.String value, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:1277)
+System.String.System.IConvertible.ToInt32 (IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:2391)
+System.Convert.ToType (System.Object value, System.Type conversionType, IFormatProvider provider, Boolean try_target_to_type) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2910)
+System.Convert.ChangeType (System.Object value, System.Type conversionType, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2511)
+Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
+Rethrow as JsonSerializationException: Error converting value "ID" to type 'System.Int32'. Path '1.ID', line 3, position 9.
+Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
+Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
+Rethrow as JsonSerializationException: Could not convert string 'ID' to dictionary key type 'System.Int32'. Create a TypeConverter to convert from the string to the key type object. Path '1.ID', line 3, position 9.
+Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
+}</args></log4net.Error>
+2023-08-29 21:35:40,842 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2023-08-29 21:35:40,952 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2023-08-29 21:35:40,953 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
+2023-08-29 21:35:40,956 [ 1] INFO  Unity: AddCharacter:1:雷电法 Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-08-29 21:35:40,959 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-08-29 21:35:40,960 [ 1] INFO  Unity: OnCharacterEnter:1
+2023-08-29 21:35:40,961 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-08-29 21:35:41,551 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2023-08-27 15:23:04,513 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2023-08-29 21:35:41,551 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2023-08-27 15:23:04,641 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-27 15:23:05,068 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-27 15:23:05,754 [ 1] INFO  Unity: MoveForward
-2023-08-27 15:23:05,756 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(5000,4000,820),dir:(100,0,0),spd:300 SPD:300
-2023-08-27 15:23:05,979 [ 1] INFO  Unity: SetDirection:(98, -20, 0)
-2023-08-27 15:23:05,980 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(5070,4000,820),dir:(98,-20,0),spd:300 SPD:300
-2023-08-27 15:23:06,075 [ 1] INFO  Unity: SetDirection:(93, -38, 0)
-2023-08-27 15:23:06,076 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(5100,3994,820),dir:(93,-38,0),spd:300 SPD:300
-2023-08-27 15:23:06,182 [ 1] INFO  Unity: SetDirection:(84, -55, 0)
-2023-08-27 15:23:06,183 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(5130,3982,820),dir:(84,-55,0),spd:300 SPD:300
-2023-08-27 15:23:06,333 [ 1] INFO  Unity: SetDirection:(73, -69, 0)
-2023-08-27 15:23:06,333 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(5166,3955,820),dir:(73,-69,0),spd:300 SPD:300
-2023-08-27 15:23:06,897 [ 1] INFO  Unity: SetDirection:(59, -81, 0)
-2023-08-27 15:23:06,899 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(5302,3853,820),dir:(59,-81,0),spd:300 SPD:300
-2023-08-27 15:23:07,011 [ 1] INFO  Unity: SetDirection:(41, -91, 0)
-2023-08-27 15:23:07,012 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(5323,3825,820),dir:(41,-91,0),spd:300 SPD:300
-2023-08-27 15:23:07,118 [ 1] INFO  Unity: SetDirection:(21, -98, 0)
-2023-08-27 15:23:07,119 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(5335,3795,820),dir:(21,-98,0),spd:300 SPD:300
-2023-08-27 15:23:07,218 [ 1] INFO  Unity: SetDirection:(1, -100, 0)
-2023-08-27 15:23:07,219 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(5341,3765,820),dir:(1,-100,0),spd:300 SPD:300
-2023-08-27 15:23:07,329 [ 1] INFO  Unity: SetDirection:(-18, -98, 0)
-2023-08-27 15:23:07,331 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(5341,3730,820),dir:(-18,-98,0),spd:300 SPD:300
-2023-08-27 15:23:07,861 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2023-08-27 15:23:07,862 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(5309,3570,820),dir:(0,-100,0),spd:300 SPD:300
-2023-08-27 15:23:10,270 [ 1] INFO  Unity: SetDirection:(18, -98, 0)
-2023-08-27 15:23:10,271 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(5309,2850,820),dir:(18,-98,0),spd:300 SPD:300
-2023-08-27 15:23:10,441 [ 1] INFO  Unity: SetDirection:(36, -93, 0)
-2023-08-27 15:23:10,442 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(5319,2800,820),dir:(36,-93,0),spd:300 SPD:300
-2023-08-27 15:23:10,538 [ 1] INFO  Unity: SetDirection:(53, -85, 0)
-2023-08-27 15:23:10,539 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(5331,2770,820),dir:(53,-85,0),spd:300 SPD:300
-2023-08-27 15:23:10,638 [ 1] INFO  Unity: SetDirection:(69, -72, 0)
-2023-08-27 15:23:10,640 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(5349,2746,820),dir:(69,-72,0),spd:300 SPD:300
-2023-08-27 15:23:10,727 [ 1] INFO  Unity: SetDirection:(81, -59, 0)
-2023-08-27 15:23:10,729 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(5364,2726,820),dir:(81,-59,0),spd:300 SPD:300
-2023-08-27 15:23:10,817 [ 1] INFO  Unity: SetDirection:(91, -42, 0)
-2023-08-27 15:23:10,817 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(5388,2708,820),dir:(91,-42,0),spd:300 SPD:300
-2023-08-27 15:23:10,990 [ 1] INFO  Unity: SetDirection:(97, -25, 0)
-2023-08-27 15:23:10,991 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(5438,2688,820),dir:(97,-25,0),spd:300 SPD:300
-2023-08-27 15:23:12,197 [ 1] INFO  Unity: SetDirection:(100, -7, 0)
-2023-08-27 15:23:12,198 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(5798,2616,820),dir:(100,-7,0),spd:300 SPD:300
-2023-08-27 15:23:12,960 [ 1] INFO  Unity: SetDirection:(99, 12, 0)
-2023-08-27 15:23:12,961 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(6028,2616,820),dir:(99,12,0),spd:300 SPD:300
-2023-08-27 15:23:13,113 [ 1] INFO  Unity: SetPosition:(6054, 2581, 805)
-2023-08-27 15:23:13,114 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(6054,2581,805),dir:(99,12,0),spd:300 SPD:300
-2023-08-27 15:23:14,495 [ 1] INFO  Unity: Stop
-2023-08-27 15:23:14,496 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(6469,2664,805),dir:(99,12,0),spd:0 SPD:0
-2023-08-27 15:23:15,031 [ 1] INFO  Unity: MoveForward
-2023-08-27 15:23:15,032 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(6469,2664,805),dir:(99,12,0),spd:300 SPD:300
-2023-08-27 15:23:15,553 [ 1] ERROR Unity: TeleporterObject:Character [哈哈] Enter Teleporter [3:主城传入点1]
+2023-08-29 21:35:41,670 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-08-29 21:35:42,116 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-08-29 21:37:24,432 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
+
+  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
+  at Network.NetClient.ProcessRecv () [0x00084] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:340 
+
+2023-08-29 21:37:24,433 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:354)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:434)
+
+2023-08-29 21:37:24,449 [ 1] INFO  Unity: DoConnect
+2023-08-29 21:37:24,449 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-08-29 21:37:24,450 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
+
+2023-08-29 21:37:26,486 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+
+2023-08-29 21:37:26,488 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
 UnityEngine.Debug:LogErrorFormat(String, Object[])
-TeleporterObject:OnTriggerEnter(Collider) (at Assets/Scripts/GameObject/TeleporterObject.cs:46)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
 
-2023-08-27 15:23:15,731 [ 1] INFO  Unity: SetPosition:(6673, 2656, 805)
-2023-08-27 15:23:15,731 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(6673,2656,805),dir:(99,12,0),spd:300 SPD:300
-2023-08-27 15:23:16,752 [ 1] INFO  Unity: SetDirection:(100, -6, 0)
-2023-08-27 15:23:16,753 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(6978,2717,805),dir:(100,-6,0),spd:300 SPD:300
-2023-08-27 15:23:16,850 [ 1] INFO  Unity: SetDirection:(97, -26, 0)
-2023-08-27 15:23:16,851 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7008,2717,805),dir:(97,-26,0),spd:300 SPD:300
-2023-08-27 15:23:16,915 [ 1] INFO  Unity: Stop
-2023-08-27 15:23:16,916 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7028,2713,805),dir:(97,-26,0),spd:0 SPD:0
-2023-08-27 15:23:16,947 [ 1] INFO  Unity: SetDirection:(89, -45, 0)
-2023-08-27 15:23:16,948 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7028,2713,805),dir:(89,-45,0),spd:0 SPD:0
-2023-08-27 15:23:17,067 [ 1] INFO  Unity: SetDirection:(79, -61, 0)
-2023-08-27 15:23:17,069 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7028,2713,805),dir:(79,-61,0),spd:0 SPD:0
-2023-08-27 15:23:17,586 [ 1] INFO  Unity: MoveForward
-2023-08-27 15:23:17,587 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7028,2713,805),dir:(79,-61,0),spd:300 SPD:300
-2023-08-27 15:23:18,034 [ 1] INFO  Unity: Stop
-2023-08-27 15:23:18,035 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(79,-61,0),spd:0 SPD:0
-2023-08-27 15:23:18,685 [ 1] INFO  Unity: SetDirection:(67, -75, 0)
-2023-08-27 15:23:18,686 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(67,-75,0),spd:0 SPD:0
-2023-08-27 15:23:18,835 [ 1] INFO  Unity: SetDirection:(51, -86, 0)
-2023-08-27 15:23:18,836 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(51,-86,0),spd:0 SPD:0
-2023-08-27 15:23:18,936 [ 1] INFO  Unity: SetDirection:(33, -95, 0)
-2023-08-27 15:23:18,937 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(33,-95,0),spd:0 SPD:0
-2023-08-27 15:23:19,021 [ 1] INFO  Unity: SetDirection:(16, -99, 0)
-2023-08-27 15:23:19,022 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(16,-99,0),spd:0 SPD:0
-2023-08-27 15:23:19,102 [ 1] INFO  Unity: SetDirection:(-2, -100, 0)
-2023-08-27 15:23:19,103 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(-2,-100,0),spd:0 SPD:0
-2023-08-27 15:23:19,209 [ 1] INFO  Unity: SetDirection:(-23, -97, 0)
-2023-08-27 15:23:19,210 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(-23,-97,0),spd:0 SPD:0
-2023-08-27 15:23:19,306 [ 1] INFO  Unity: SetDirection:(-42, -91, 0)
-2023-08-27 15:23:19,307 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(-42,-91,0),spd:0 SPD:0
-2023-08-27 15:23:19,383 [ 1] INFO  Unity: SetDirection:(-57, -82, 0)
-2023-08-27 15:23:19,385 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(-57,-82,0),spd:0 SPD:0
-2023-08-27 15:23:19,475 [ 1] INFO  Unity: SetDirection:(-71, -71, 0)
-2023-08-27 15:23:19,475 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(-71,-71,0),spd:0 SPD:0
-2023-08-27 15:23:19,557 [ 1] INFO  Unity: SetDirection:(-82, -57, 0)
-2023-08-27 15:23:19,558 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(-82,-57,0),spd:0 SPD:0
-2023-08-27 15:23:19,653 [ 1] INFO  Unity: SetDirection:(-92, -39, 0)
-2023-08-27 15:23:19,654 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(-92,-39,0),spd:0 SPD:0
-2023-08-27 15:23:19,762 [ 1] INFO  Unity: SetDirection:(-98, -19, 0)
-2023-08-27 15:23:19,763 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(-98,-19,0),spd:0 SPD:0
-2023-08-27 15:23:19,861 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2023-08-27 15:23:19,862 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(-100,0,0),spd:0 SPD:0
-2023-08-27 15:23:19,998 [ 1] INFO  Unity: SetDirection:(-98, 18, 0)
-2023-08-27 15:23:19,999 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(-98,18,0),spd:0 SPD:0
-2023-08-27 15:23:33,569 [ 1] INFO  Unity: SetDirection:(-93, 36, 0)
-2023-08-27 15:23:33,570 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(-93,36,0),spd:0 SPD:0
-2023-08-27 15:23:33,690 [ 1] INFO  Unity: SetDirection:(-85, 53, 0)
-2023-08-27 15:23:33,690 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(-85,53,0),spd:0 SPD:0
-2023-08-27 15:23:33,766 [ 1] INFO  Unity: SetDirection:(-74, 67, 0)
-2023-08-27 15:23:33,767 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(-74,67,0),spd:0 SPD:0
-2023-08-27 15:23:33,872 [ 1] INFO  Unity: SetDirection:(-59, 81, 0)
-2023-08-27 15:23:33,872 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(-59,81,0),spd:0 SPD:0
-2023-08-27 15:23:33,956 [ 1] INFO  Unity: SetDirection:(-44, 90, 0)
-2023-08-27 15:23:33,957 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(-44,90,0),spd:0 SPD:0
-2023-08-27 15:23:34,047 [ 1] INFO  Unity: SetDirection:(-27, 96, 0)
-2023-08-27 15:23:34,048 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(-27,96,0),spd:0 SPD:0
-2023-08-27 15:23:34,130 [ 1] INFO  Unity: SetDirection:(-7, 100, 0)
-2023-08-27 15:23:34,132 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(-7,100,0),spd:0 SPD:0
-2023-08-27 15:23:34,222 [ 1] INFO  Unity: SetDirection:(11, 99, 0)
-2023-08-27 15:23:34,223 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(11,99,0),spd:0 SPD:0
-2023-08-27 15:23:34,314 [ 1] INFO  Unity: SetDirection:(31, 95, 0)
-2023-08-27 15:23:34,315 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(31,95,0),spd:0 SPD:0
-2023-08-27 15:23:34,425 [ 1] INFO  Unity: SetDirection:(50, 87, 0)
-2023-08-27 15:23:34,425 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(50,87,0),spd:0 SPD:0
-2023-08-27 15:23:34,509 [ 1] INFO  Unity: SetDirection:(64, 77, 0)
-2023-08-27 15:23:34,510 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(64,77,0),spd:0 SPD:0
-2023-08-27 15:23:34,550 [ 1] INFO  Unity: MoveForward
-2023-08-27 15:23:34,550 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7136,2632,805),dir:(64,77,0),spd:300 SPD:300
-2023-08-27 15:23:34,585 [ 1] INFO  Unity: SetDirection:(77, 64, 0)
-2023-08-27 15:23:34,585 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7142,2640,805),dir:(77,64,0),spd:300 SPD:300
-2023-08-27 15:23:34,683 [ 1] INFO  Unity: SetDirection:(88, 47, 0)
-2023-08-27 15:23:34,684 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7166,2658,805),dir:(88,47,0),spd:300 SPD:300
-2023-08-27 15:23:34,770 [ 1] INFO  Unity: SetDirection:(95, 31, 0)
-2023-08-27 15:23:34,771 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7186,2668,805),dir:(95,31,0),spd:300 SPD:300
-2023-08-27 15:23:34,873 [ 1] INFO  Unity: SetDirection:(99, 13, 0)
-2023-08-27 15:23:34,874 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(7216,2680,805),dir:(99,13,0),spd:300 SPD:300
-2023-08-27 15:23:34,918 [ 1] ERROR Unity: TeleporterObject:Character [哈哈] Enter Teleporter [1:主城->野外]
+2023-08-29 21:37:26,552 [ 1] INFO  Unity: DoConnect
+2023-08-29 21:37:26,553 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-08-29 21:37:26,554 [ 1] INFO  Unity: Connect[1] to server 10.0.0.100:8000
+
+2023-08-29 21:37:28,603 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+
+2023-08-29 21:37:28,605 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
 UnityEngine.Debug:LogErrorFormat(String, Object[])
-TeleporterObject:OnTriggerEnter(Collider) (at Assets/Scripts/GameObject/TeleporterObject.cs:46)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
 
-2023-08-27 15:23:34,919 [ 1] INFO  Unity: MapTeleportRequest: teleporterID:1
-2023-08-27 15:23:34,955 [ 1] INFO  Unity: OnMapCharacterLeave:CharID:3
-2023-08-27 15:23:34,958 [ 1] INFO  Unity: RemoveCharacter:3
-2023-08-27 15:23:34,961 [ 1] INFO  Unity: OnMapCharacterEnter:Map:2 Count:1
-2023-08-27 15:23:34,962 [ 1] INFO  Unity: AddCharacter:3:哈哈 Map:2 Entity:(3:pos:(2493,4051,32),dir:(100,0,0),spd:300
-2023-08-27 15:23:34,972 [ 1] INFO  Unity: LoadLevel: Map01
-2023-08-27 15:23:34,972 [ 1] INFO  Unity: OnCharacterEnter:2
-2023-08-27 15:23:34,973 [ 1] INFO  Unity: LoadLevel: Map01
-2023-08-27 15:23:35,264 [ 1] INFO  Unity: Character_3_哈哈 OnDestroy :ID:3 POS:(7241, 2685, 805) DIR:(99, 13, 0) SPD:300 
-2023-08-27 15:23:35,294 [ 1] INFO  Unity: MoveForward
-2023-08-27 15:23:35,294 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(2498,4051,32),dir:(100,0,0),spd:300 SPD:300
-2023-08-27 15:23:35,320 [ 1] INFO  Unity: SetDirection:(98, -19, 0)
-2023-08-27 15:23:35,321 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(2528,4051,32),dir:(98,-19,0),spd:300 SPD:300
-2023-08-27 15:23:35,363 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2023-08-29 21:37:28,650 [ 1] INFO  Unity: DoConnect
+2023-08-29 21:37:28,651 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-08-29 21:37:28,652 [ 1] INFO  Unity: Connect[2] to server 10.0.0.100:8000
 
-2023-08-27 15:23:35,527 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-27 15:23:35,529 [ 1] INFO  Unity: Stop
-2023-08-27 15:23:35,530 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(2548,4047,32),dir:(98,-19,0),spd:0 SPD:0
-2023-08-27 15:23:35,532 [ 1] ERROR Unity: TeleporterObject:Character [哈哈] Enter Teleporter [6:野外传入点]
+2023-08-29 21:37:30,703 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+
+2023-08-29 21:37:30,705 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
 UnityEngine.Debug:LogErrorFormat(String, Object[])
-TeleporterObject:OnTriggerEnter(Collider) (at Assets/Scripts/GameObject/TeleporterObject.cs:46)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
 
-2023-08-27 15:23:35,839 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-27 15:23:35,841 [ 1] ERROR Unity: TeleporterObject:Character [哈哈] Enter Teleporter [6:野外传入点]
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-TeleporterObject:OnTriggerEnter(Collider) (at Assets/Scripts/GameObject/TeleporterObject.cs:46)
-
-2023-08-27 15:23:36,303 [ 1] INFO  Unity: MoveForward
-2023-08-27 15:23:36,304 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(2548,4047,32),dir:(98,-19,0),spd:300 SPD:300
-2023-08-27 15:23:37,021 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
-2023-08-27 15:23:37,022 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(2763,4004,32),dir:(93,-37,0),spd:300 SPD:300
-2023-08-27 15:23:37,137 [ 1] INFO  Unity: SetDirection:(84, -54, 0)
-2023-08-27 15:23:37,138 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(2798,3990,32),dir:(84,-54,0),spd:300 SPD:300
-2023-08-27 15:23:37,514 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
-2023-08-27 15:23:37,515 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(2890,3921,32),dir:(93,-37,0),spd:300 SPD:300
-2023-08-27 15:23:37,615 [ 1] INFO  Unity: SetDirection:(98, -17, 0)
-2023-08-27 15:23:37,616 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(2920,3909,32),dir:(98,-17,0),spd:300 SPD:300
-2023-08-27 15:23:37,718 [ 1] INFO  Unity: SetDirection:(100, 4, 0)
-2023-08-27 15:23:37,719 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(2950,3903,32),dir:(100,4,0),spd:300 SPD:300
-2023-08-27 15:23:37,820 [ 1] INFO  Unity: SetDirection:(97, 24, 0)
-2023-08-27 15:23:37,821 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(2980,3903,32),dir:(97,24,0),spd:300 SPD:300
-2023-08-27 15:23:37,899 [ 1] INFO  Unity: SetDirection:(91, 41, 0)
-2023-08-27 15:23:37,900 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(3005,3908,32),dir:(91,41,0),spd:300 SPD:300
-2023-08-27 15:23:38,005 [ 1] INFO  Unity: SetDirection:(81, 59, 0)
-2023-08-27 15:23:38,006 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(3035,3920,32),dir:(81,59,0),spd:300 SPD:300
-2023-08-27 15:23:38,099 [ 1] INFO  Unity: SetDirection:(67, 74, 0)
-2023-08-27 15:23:38,100 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(3059,3938,32),dir:(67,74,0),spd:300 SPD:300
-2023-08-27 15:23:38,184 [ 1] INFO  Unity: SetDirection:(53, 85, 0)
-2023-08-27 15:23:38,185 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(3074,3958,32),dir:(53,85,0),spd:300 SPD:300
-2023-08-27 15:23:38,287 [ 1] INFO  Unity: SetDirection:(34, 94, 0)
-2023-08-27 15:23:38,289 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(3092,3982,32),dir:(34,94,0),spd:300 SPD:300
-2023-08-27 15:23:38,386 [ 1] INFO  Unity: SetDirection:(14, 99, 0)
-2023-08-27 15:23:38,387 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(3104,4012,32),dir:(14,99,0),spd:300 SPD:300
-2023-08-27 15:23:38,472 [ 1] INFO  Unity: SetDirection:(-4, 100, 0)
-2023-08-27 15:23:38,473 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(3109,4037,32),dir:(-4,100,0),spd:300 SPD:300
-2023-08-27 15:23:38,517 [ 1] INFO  Unity: Stop
-2023-08-27 15:23:38,518 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(3109,4052,32),dir:(-4,100,0),spd:0 SPD:0
-2023-08-27 15:23:38,575 [ 1] INFO  Unity: SetDirection:(-24, 97, 0)
-2023-08-27 15:23:38,576 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(3109,4052,32),dir:(-24,97,0),spd:0 SPD:0
-2023-08-27 15:23:38,660 [ 1] INFO  Unity: SetDirection:(-41, 91, 0)
-2023-08-27 15:23:38,660 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(3109,4052,32),dir:(-41,91,0),spd:0 SPD:0
-2023-08-27 15:23:38,778 [ 1] INFO  Unity: SetDirection:(-57, 82, 0)
-2023-08-27 15:23:38,779 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(3109,4052,32),dir:(-57,82,0),spd:0 SPD:0
-2023-08-27 15:23:38,857 [ 1] INFO  Unity: MoveForward
-2023-08-27 15:23:38,857 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(3109,4052,32),dir:(-57,82,0),spd:300 SPD:300
-2023-08-27 15:23:39,207 [ 1] INFO  Unity: SetDirection:(-71, 70, 0)
-2023-08-27 15:23:39,208 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(3046,4136,32),dir:(-71,70,0),spd:300 SPD:300
-2023-08-27 15:23:39,335 [ 1] INFO  Unity: SetDirection:(-83, 56, 0)
-2023-08-27 15:23:39,337 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(3014,4168,32),dir:(-83,56,0),spd:300 SPD:300
-2023-08-27 15:23:39,409 [ 1] INFO  Unity: Stop
-2023-08-27 15:23:39,410 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(2998,4180,32),dir:(-83,56,0),spd:0 SPD:0
-2023-08-27 15:23:39,440 [ 1] INFO  Unity: SetDirection:(-92, 38, 0)
-2023-08-27 15:23:39,441 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(2998,4180,32),dir:(-92,38,0),spd:0 SPD:0
-2023-08-27 15:23:39,454 [ 1] INFO  Unity: MoveBack
-2023-08-27 15:23:39,454 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(2998,4180,32),dir:(-92,38,0),spd:-300 SPD:-300
-2023-08-27 15:23:39,521 [ 1] INFO  Unity: SetDirection:(-98, 21, 0)
-2023-08-27 15:23:39,521 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(3018,4172,32),dir:(-98,21,0),spd:-300 SPD:-300
-2023-08-27 15:23:39,606 [ 1] INFO  Unity: Stop
-2023-08-27 15:23:39,606 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(3043,4167,32),dir:(-98,21,0),spd:0 SPD:0
-2023-08-27 15:23:39,625 [ 1] INFO  Unity: SetDirection:(-100, 1, 0)
-2023-08-27 15:23:39,626 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(3043,4167,32),dir:(-100,1,0),spd:0 SPD:0
-2023-08-27 15:23:39,686 [ 1] INFO  Unity: MoveForward
-2023-08-27 15:23:39,687 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(3043,4167,32),dir:(-100,1,0),spd:300 SPD:300
-2023-08-27 15:23:39,723 [ 1] INFO  Unity: SetDirection:(-99, -17, 0)
-2023-08-27 15:23:39,724 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(3033,4167,32),dir:(-99,-17,0),spd:300 SPD:300
-2023-08-27 15:23:40,476 [ 1] ERROR Unity: TeleporterObject:Character [哈哈] Enter Teleporter [6:野外传入点]
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-TeleporterObject:OnTriggerEnter(Collider) (at Assets/Scripts/GameObject/TeleporterObject.cs:46)
-
-2023-08-27 15:23:42,381 [ 1] ERROR Unity: TeleporterObject:Character [哈哈] Enter Teleporter [5:野外->主城]
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-TeleporterObject:OnTriggerEnter(Collider) (at Assets/Scripts/GameObject/TeleporterObject.cs:46)
-
-2023-08-27 15:23:42,382 [ 1] INFO  Unity: MapTeleportRequest: teleporterID:5
-2023-08-27 15:23:42,400 [ 1] INFO  Unity: OnMapCharacterLeave:CharID:3
-2023-08-27 15:23:42,402 [ 1] INFO  Unity: RemoveCharacter:3
-2023-08-27 15:23:42,403 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
-2023-08-27 15:23:42,404 [ 1] INFO  Unity: AddCharacter:3:哈哈 Map:1 Entity:(3:pos:(1207,2600,800),dir:(100,0,0),spd:300
-2023-08-27 15:23:42,415 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-08-27 15:23:42,416 [ 1] INFO  Unity: OnCharacterEnter:1
-2023-08-27 15:23:42,417 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-08-27 15:23:42,841 [ 1] INFO  Unity: Character_3_哈哈 OnDestroy :ID:3 POS:(2233, 4007, 32) DIR:(-99, -17, 0) SPD:300 
-2023-08-27 15:23:42,876 [ 1] INFO  Unity: MoveForward
-2023-08-27 15:23:42,877 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(1212,2600,800),dir:(100,0,0),spd:300 SPD:300
-2023-08-27 15:23:42,931 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
-
-2023-08-27 15:23:42,932 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
-
-2023-08-27 15:23:43,055 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-27 15:23:43,056 [ 1] INFO  Unity: Stop
-2023-08-27 15:23:43,057 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(1262,2600,800),dir:(100,0,0),spd:0 SPD:0
-2023-08-27 15:23:43,058 [ 1] ERROR Unity: TeleporterObject:Character [哈哈] Enter Teleporter [4:出城传入点2]
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-TeleporterObject:OnTriggerEnter(Collider) (at Assets/Scripts/GameObject/TeleporterObject.cs:46)
-
-2023-08-27 15:23:43,502 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-27 15:23:43,503 [ 1] ERROR Unity: TeleporterObject:Character [哈哈] Enter Teleporter [4:出城传入点2]
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-TeleporterObject:OnTriggerEnter(Collider) (at Assets/Scripts/GameObject/TeleporterObject.cs:46)
-
-2023-08-27 15:23:43,654 [ 1] INFO  Unity: MoveForward
-2023-08-27 15:23:43,655 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(1262,2600,800),dir:(100,0,0),spd:300 SPD:300
-2023-08-27 15:23:44,806 [ 1] INFO  Unity: Stop
-2023-08-27 15:23:44,807 [ 1] INFO  Unity: MapEntitySyncResponse: ID:3 POS:SkillBridge.Message.NVector3 DIR:(3:pos:(1602,2600,800),dir:(100,0,0),spd:0 SPD:0
-2023-08-27 15:25:11,537 [ 1] INFO  Unity: Character_3_哈哈 OnDestroy :ID:3 POS:(1602, 2600, 800) DIR:(100, 0, 0) SPD:0 
-2023-08-27 15:25:11,538 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-08-27 15:25:11,538 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-08-29 21:37:30,705 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :1 reason:Cannot connect to server
+2023-08-29 21:37:30,748 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-08-29 21:37:30,748 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
+2023-08-29 21:37:30,750 [ 1] INFO  Unity: Character_1_雷电法 OnDestroy :ID:1 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
