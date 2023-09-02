@@ -221,5 +221,10 @@ namespace Network
                 Log.Warning("MessageDistribute thread end");
             }
         }
+
+        internal void RaiseEvent<T>(T sender, object mapTeleport)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
