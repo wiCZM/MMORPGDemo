@@ -72,9 +72,8 @@ message NCharacterInfo {
 	int32 level = 6;
 	int32 mapId = 7;
 	NEntity entity = 8;
-
-	repeated NItemInfo Item = 10;
-	NBagInfo Bag = 11;
+	repeated NItemInfo Item = 9;
+	NBagInfo Bag = 1101;
 }
 
 message NItemInfo
