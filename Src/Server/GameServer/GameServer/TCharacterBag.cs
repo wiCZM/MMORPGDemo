@@ -12,12 +12,11 @@ namespace GameServer
     using System;
     using System.Collections.Generic;
     
-    public partial class TCharacterItem
+    public partial class TCharacterBag
     {
         public int Id { get; set; }
-        public int ItemID { get; set; }
-        public int ItemCount { get; set; }
-        public int CharacterID { get; set; }
+        public byte[] Items { get; set; }
+        public int Unlocked { get; set; }
     
         public virtual TCharacter Owner { get; set; }
     }

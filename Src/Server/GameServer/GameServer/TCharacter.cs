@@ -31,6 +31,7 @@ namespace GameServer
         public int MapPosZ { get; set; }
     
         public virtual TPlayer Player { get; set; }
+        public virtual TCharacterBag Bag { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TCharacterItem> Items { get; set; }
     }

@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 08/07/2023 00:29:11
--- Generated from EDMX file: D:\T2\Unity\Demo\mymmorpg\Src\Server\GameServer\GameServer\Entities.edmx
+-- Date Created: 08/30/2023 17:20:06
+-- Generated from EDMX file: D:\T2\Unity\Demo\Mymmorpg\Src\Server\GameServer\GameServer\Entities.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -23,8 +23,11 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_PlayerCharacter]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Characters] DROP CONSTRAINT [FK_PlayerCharacter];
 GO
-IF OBJECT_ID(N'[dbo].[FK_TCharacterTCharacterItem]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[CharacterItem] DROP CONSTRAINT [FK_TCharacterTCharacterItem];
+IF OBJECT_ID(N'[dbo].[FK_CharacterItem]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[CharacterItems] DROP CONSTRAINT [FK_CharacterItem];
+GO
+IF OBJECT_ID(N'[dbo].[FK_CharacterBag]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Characters] DROP CONSTRAINT [FK_CharacterBag];
 GO
 
 -- --------------------------------------------------
@@ -40,8 +43,11 @@ GO
 IF OBJECT_ID(N'[dbo].[Characters]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Characters];
 GO
-IF OBJECT_ID(N'[dbo].[CharacterItem]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[CharacterItem];
+IF OBJECT_ID(N'[dbo].[CharacterItems]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[CharacterItems];
+GO
+IF OBJECT_ID(N'[dbo].[CharacterBags]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[CharacterBags];
 GO
 
 -- --------------------------------------------------
@@ -74,15 +80,25 @@ CREATE TABLE [dbo].[Characters] (
     [MapPosX] int  NOT NULL,
     [MapPosY] int  NOT NULL,
     [MapPosZ] int  NOT NULL,
-    [Player_ID] int  NOT NULL
+    [Player_ID] int  NOT NULL,
+    [Bag_Id] int  NOT NULL
 );
 GO
 
--- Creating table 'CharacterItem'
-CREATE TABLE [dbo].[CharacterItem] (
+-- Creating table 'CharacterItems'
+CREATE TABLE [dbo].[CharacterItems] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Name] nvarchar(max)  NOT NULL,
+    [ItemID] int  NOT NULL,
+    [ItemCount] int  NOT NULL,
     [CharacterID] int  NOT NULL
+);
+GO
+
+-- Creating table 'CharacterBags'
+CREATE TABLE [dbo].[CharacterBags] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [Items] varbinary(max)  NOT NULL,
+    [Unlocked] int  NOT NULL
 );
 GO
 
@@ -108,9 +124,15 @@ ADD CONSTRAINT [PK_Characters]
     PRIMARY KEY CLUSTERED ([ID] ASC);
 GO
 
--- Creating primary key on [Id] in table 'CharacterItem'
-ALTER TABLE [dbo].[CharacterItem]
-ADD CONSTRAINT [PK_CharacterItem]
+-- Creating primary key on [Id] in table 'CharacterItems'
+ALTER TABLE [dbo].[CharacterItems]
+ADD CONSTRAINT [PK_CharacterItems]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'CharacterBags'
+ALTER TABLE [dbo].[CharacterBags]
+ADD CONSTRAINT [PK_CharacterBags]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
@@ -148,19 +170,34 @@ ON [dbo].[Characters]
     ([Player_ID]);
 GO
 
--- Creating foreign key on [CharacterID] in table 'CharacterItem'
-ALTER TABLE [dbo].[CharacterItem]
-ADD CONSTRAINT [FK_TCharacterTCharacterItem]
+-- Creating foreign key on [CharacterID] in table 'CharacterItems'
+ALTER TABLE [dbo].[CharacterItems]
+ADD CONSTRAINT [FK_CharacterItem]
     FOREIGN KEY ([CharacterID])
     REFERENCES [dbo].[Characters]
         ([ID])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
--- Creating non-clustered index for FOREIGN KEY 'FK_TCharacterTCharacterItem'
-CREATE INDEX [IX_FK_TCharacterTCharacterItem]
-ON [dbo].[CharacterItem]
+-- Creating non-clustered index for FOREIGN KEY 'FK_CharacterItem'
+CREATE INDEX [IX_FK_CharacterItem]
+ON [dbo].[CharacterItems]
     ([CharacterID]);
+GO
+
+-- Creating foreign key on [Bag_Id] in table 'Characters'
+ALTER TABLE [dbo].[Characters]
+ADD CONSTRAINT [FK_CharacterBag]
+    FOREIGN KEY ([Bag_Id])
+    REFERENCES [dbo].[CharacterBags]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_CharacterBag'
+CREATE INDEX [IX_FK_CharacterBag]
+ON [dbo].[Characters]
+    ([Bag_Id]);
 GO
 
 -- --------------------------------------------------

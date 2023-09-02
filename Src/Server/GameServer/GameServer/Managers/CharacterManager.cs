@@ -35,6 +35,7 @@ namespace GameServer.Managers
         {
             Character character = new Character(CharacterType.Player, cha);
             EntityManager.Instance.AddEntity(cha.MapID, character);
+            character.Info.Id = character.Id;
             this.Characters[cha.ID] = character;
             return character;
         }
@@ -42,9 +43,19 @@ namespace GameServer.Managers
 
         public void RemoveCharacter(int characterId)
         {
-            var cha = this.Characters[characterId];
-            EntityManager.Instance.AddEntity(cha.Data.MapID, cha);
-            this.Characters.Remove(characterId);
+            if (this.Characters.ContainsKey(characterId))
+            {
+                var cha = this.Characters[characterId];
+                EntityManager.Instance.RemoveEntity(cha.Data.MapID, cha);
+                this.Characters.Remove(characterId);
+            }
+            else
+            {
+                Log.InfoFormat("CharacterManager:正在尝试删除一个角色");
+            }
+            //var cha = this.Characters[characterId];
+            //EntityManager.Instance.AddEntity(cha.Data.MapID, cha);
+            //this.Characters.Remove(characterId);
         }
     }
 }
