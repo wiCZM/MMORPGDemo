@@ -7,10 +7,7 @@ using System;
 using Models;
 
 public class NPCController : MonoBehaviour {
-
-
     public int npcId;
-
 
     SkinnedMeshRenderer renderer;
     Animator anim;
@@ -20,14 +17,35 @@ public class NPCController : MonoBehaviour {
 
     NpcDefine npc;
 
-	// Use this for initialization
+    NpcQuestStatus questStatus;
+
 	void Start () {
         renderer = this.GetComponentInChildren<SkinnedMeshRenderer>();
         anim = this.gameObject.GetComponent<Animator>();
         orignColor = renderer.sharedMaterial.color;
         npc = NPCManager.Instance.GetNpcDefine(this.npcId);
         this.StartCoroutine(Actions());
+        RefreshNpcStatus();
+        QuestManager.Instance.onQuestStatusChanged += OnQuestStatusChanged;
 	}
+
+    void OnQuestStatusChanged(Quest arg0)
+    {
+        this.RefreshNpcStatus();
+    }
+
+    private void RefreshNpcStatus()
+    {
+        questStatus = QuestManager.Instance.GetQuestStatusByNpc(this.npcId);
+        UIWorldElementManager.Instance.AddNpcQuestStatus(this.transform, questStatus);
+    }
+
+    void OnDestroy()
+    {
+        QuestManager.Instance.onQuestStatusChanged -= OnQuestStatusChanged;
+        if (UIWorldElementManager.Instance != null)
+            UIWorldElementManager.Instance.RemoveNpcQuestStatus(this.transform);
+    }
 
     IEnumerator Actions()
     {
@@ -41,8 +59,6 @@ public class NPCController : MonoBehaviour {
         }
     }
 
-
-    // Update is called once per frame
     void Update()
     {
 
@@ -86,6 +102,7 @@ public class NPCController : MonoBehaviour {
     private void OnMouseDown()
     {
         Interactive();
+        ShopManager.Instance.OnOpenShop(npc);
     }
 
     private void OnMouseOver()

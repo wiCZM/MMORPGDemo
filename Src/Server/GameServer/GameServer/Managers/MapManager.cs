@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,8 +23,6 @@ namespace GameServer.Managers
             }
         }
 
-
-
         public Map this[int key]
         {
             get
@@ -32,10 +31,9 @@ namespace GameServer.Managers
             }
         }
 
-
         public void Update()
         {
-            foreach(var map in this.Maps.Values)
+            foreach (var map in this.Maps.Values)
             {
                 map.Update();
             }

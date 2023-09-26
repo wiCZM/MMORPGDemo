@@ -18,11 +18,7 @@ namespace Services
             MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnMapCharacterEnter);
             MessageDistributer.Instance.Subscribe<MapCharacterLeaveResponse>(this.OnMapCharacterLeave);
             MessageDistributer.Instance.Subscribe<MapEntitySyncResponse>(this.OnMapEnitySync);
-
-
         }
-
-
 
         public void Dispose()
         {
@@ -40,7 +36,7 @@ namespace Services
             Debug.LogFormat("OnMapCharacterEnter:Map:{0} Count:{1}", response.mapId, response.Characters.Count);
             foreach (var cha in response.Characters)
             {
-                if (User.Instance.CurrentCharacter == null || User.Instance.CurrentCharacter.Id == cha.Id)
+                if ((User.Instance.CurrentCharacter == null || cha.Type == CharacterType.Player && User.Instance.CurrentCharacter.Id == cha.Id ))//需要修改成判断当前player,简化
                 {//当前角色切换地图
                     User.Instance.CurrentCharacter = cha;
                 }
@@ -55,9 +51,9 @@ namespace Services
 
         private void OnMapCharacterLeave(object sender, MapCharacterLeaveResponse response)
         {
-            Debug.LogFormat("OnMapCharacterLeave:CharID:{0}", response.characterId);
-            if (response.characterId != User.Instance.CurrentCharacter.Id)
-                CharacterManager.Instance.RemoveCharacter(response.characterId);
+            Debug.LogFormat("OnMapCharacterLeave:CharID:{0}", response.entityId);
+            if (response.entityId != User.Instance.CurrentCharacter.EntityId)
+                CharacterManager.Instance.RemoveCharacter(response.entityId);
             else
                 CharacterManager.Instance.Clear();
         }
@@ -78,7 +74,7 @@ namespace Services
 
         public void SendMapEntitySync(EntityEvent entityEvent, NEntity entity)
         {
-            Debug.LogFormat("MapEntitySyncResponse: ID:{0} POS:{1} DIR:{2} SPD:{3}", entity.Id, entity.Direction, entity.String(),entity.Speed);
+            //Debug.LogFormat("MapEntitySyncResponse: ID:{0} POS:{1} DIR:{2} SPD:{3}", entity.Id, entity.Direction, entity.String(), entity.Speed);
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
             message.Request.mapEntitySync = new MapEntitySyncRequest();

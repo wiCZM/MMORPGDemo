@@ -12,6 +12,7 @@ using Network;
 using GameServer.Managers;
 using GameServer.Entities;
 using GameServer.Services;
+using System.Diagnostics;
 
 namespace GameServer.Models
 {
@@ -35,83 +36,70 @@ namespace GameServer.Models
         }
         internal MapDefine Define;
 
+        /// <summary>
+        /// 地图中的角色,以CharacterID为Key
+        /// </summary>
         Dictionary<int, MapCharacter> MapCharacters = new Dictionary<int, MapCharacter>();
 
+        /// <summary>
+        /// 刷怪管理器
+        /// </summary>
+        /// <param name="define"></param>
+        SpawnManager SpawnManager = new SpawnManager();
+
+        public MonsterManager MonsterManager = new MonsterManager();
 
         internal Map(MapDefine define)
         {
             this.Define = define;
+            this.SpawnManager.Init(this);
+            this.MonsterManager.Init(this);
+            Console.WriteLine("Map created: " + define.ID);
         }
 
         internal void Update()
         {
+            SpawnManager.Update();
         }
 
         /// <summary>
         /// 角色进入地图
         /// </summary>
         /// <param name="character"></param>
-        //internal void CharacterEnter(NetConnection<NetSession> conn, Character character)
-        //{
-        //    Log.InfoFormat("CharacterEnter: Map:{0} characterId:{1}", this.Define.ID, character.Id);
-
-        //    character.Info.mapId = this.ID;
-
-        //    NetMessage message = new NetMessage();
-        //    message.Response = new NetMessageResponse();
-
-        //    message.Response.mapCharacterEnter = new MapCharacterEnterResponse();
-        //    message.Response.mapCharacterEnter.mapId = this.Define.ID;
-        //    message.Response.mapCharacterEnter.Characters.Add(character.Info);
-
-        //    foreach (var kv in this.MapCharacters)
-        //    {
-        //        message.Response.mapCharacterEnter.Characters.Add(kv.Value.character.Info);
-        //        this.SendCharacterEnterMap(kv.Value.connection, character.Info);
-        //    }
-
-        //    this.MapCharacters[character.Id] = new MapCharacter(conn, character);
-
-        //    byte[] data = PackageHandler.PackMessage(message);
-        //    conn.SendData(data, 0, data.Length);
-        //}
-
-
-        //
-
         internal void CharacterEnter(NetConnection<NetSession> conn, Character character)
         {
             Log.InfoFormat("CharacterEnter: Map:{0} characterId:{1}", this.Define.ID, character.Id);
 
             character.Info.mapId = this.ID;
 
-            // 发送新角色信息给地图上的所有其他角色
-            NetMessage newCharacterMessage = new NetMessage();
-            newCharacterMessage.Response = new NetMessageResponse();
-            newCharacterMessage.Response.mapCharacterEnter = new MapCharacterEnterResponse();
-            newCharacterMessage.Response.mapCharacterEnter.mapId = this.Define.ID;
-            newCharacterMessage.Response.mapCharacterEnter.Characters.Add(character.Info);
-            byte[] newCharacterData = PackageHandler.PackMessage(newCharacterMessage);
-
-            foreach (var kv in this.MapCharacters)
-            {
-                kv.Value.connection.SendData(newCharacterData, 0, newCharacterData.Length);
-            }
-
-            // 为新进入的角色创建完整的消息
-            NetMessage fullMessage = new NetMessage();
-            fullMessage.Response = new NetMessageResponse();
-            fullMessage.Response.mapCharacterEnter = new MapCharacterEnterResponse();
-            fullMessage.Response.mapCharacterEnter.mapId = this.Define.ID;
-            fullMessage.Response.mapCharacterEnter.Characters.Add(character.Info);
-            foreach (var kv in this.MapCharacters)
-            {
-                fullMessage.Response.mapCharacterEnter.Characters.Add(kv.Value.character.Info);
-            }
-            byte[] fullData = PackageHandler.PackMessage(fullMessage);
-            conn.SendData(fullData, 0, fullData.Length);
-
             this.MapCharacters[character.Id] = new MapCharacter(conn, character);
+
+            // 发送新角色信息给地图上的所有其他角色
+            conn.Session.Response.mapCharacterEnter = new MapCharacterEnterResponse();
+            conn.Session.Response.mapCharacterEnter.mapId = this.Define.ID;
+
+            foreach (var kv in this.MapCharacters)
+            {
+                conn.Session.Response.mapCharacterEnter.Characters.Add(kv.Value.character.Info);
+                if (kv.Value.character != character)
+                    this.AddCharacterEnterMap(kv.Value.connection, character.Info);
+            }
+
+            foreach (var kv in this.MonsterManager.Monsters)
+            {
+                conn.Session.Response.mapCharacterEnter.Characters.Add(kv.Value.Info);
+            }
+            conn.SendResponse();
+       }
+
+        private void AddCharacterEnterMap(NetConnection<NetSession> connection, NCharacterInfo info)
+        {
+            // 初始化新的响应，用于告知新角色的进入
+            connection.Session.Response.mapCharacterEnter = new MapCharacterEnterResponse();
+            connection.Session.Response.mapCharacterEnter.mapId = this.ID;
+            // 将新进入的角色信息添加到响应中
+            connection.Session.Response.mapCharacterEnter.Characters.Add(info);
+            connection.SendResponse();
         }
 
         //角色离开
@@ -127,41 +115,22 @@ namespace GameServer.Models
 
         void SendCharacterEnterMap(NetConnection<NetSession> conn, NCharacterInfo character)
         {
-            if (conn == null || character == null)
+            if (conn.Session.Response.mapCharacterEnter == null)
             {
-                // Log an error or throw an exception based on your design.
-                throw new ArgumentNullException("Connection or Character info cannot be null.");
+                conn.Session.Response.mapCharacterEnter = new MapCharacterEnterResponse();
+                conn.Session.Response.mapCharacterEnter.mapId = this.Define.ID;
             }
-
-            NetMessage message = new NetMessage();
-            message.Response = new NetMessageResponse();
-
-            message.Response.mapCharacterEnter = new MapCharacterEnterResponse();
-            message.Response.mapCharacterEnter.mapId = this.Define.ID;
-            message.Response.mapCharacterEnter.Characters.Add(character);
-
-            byte[] data = PackageHandler.PackMessage(message);
-            conn.SendData(data, 0, data.Length);
+            conn.Session.Response.mapCharacterEnter.Characters.Add(character);
+            conn.SendResponse();
         }
 
         private void SendCharacterLeaveMap(NetConnection<NetSession> conn, Character character)
         {
-            if (conn == null || character == null)
-            {
-                // Log an error or throw an exception based on your design.
-                throw new ArgumentNullException("Connection or Character info cannot be null.");
-            }
-
-            NetMessage message = new NetMessage();
-            message.Response = new NetMessageResponse();
-
-            message.Response.mapCharacterLeave = new MapCharacterLeaveResponse();
-            message.Response.mapCharacterLeave.characterId = character.Id;
-
-            byte[] data = PackageHandler.PackMessage(message);
-            conn.SendData(data, 0, data.Length);
+            Log.InfoFormat("SendCharacterLeaveMap To:{0}:{1} : Map :{2} Character : {3}:{4}", conn.Session.Character.Id, conn.Session.Character.Info.Name,this.Define.ID,character.Id,character.Info.Name);
+            conn.Session.Response.mapCharacterLeave = new MapCharacterLeaveResponse();
+            conn.Session.Response.mapCharacterLeave.entityId = character.entityId;
+            conn.SendResponse();
         }
-
 
         internal void UpdateEntity(NEntitySync entity)
         {
@@ -177,6 +146,20 @@ namespace GameServer.Models
                 {
                     MapService.Instance.SendEntityUpdate(kv.Value.connection,entity);
                 }
+            }
+        }
+
+        /// <summary>
+        /// 怪物进入地图
+        /// </summary>
+        /// <param name="monster"></param>
+        internal void MonsterEnter(Monster monster)
+        {
+            Log.InfoFormat("CharacterEnter: Map:{0} monsterId:{1}", this.Define.ID, monster.Id);
+
+            foreach (var kv in this.MapCharacters)
+            {
+                this.AddCharacterEnterMap(kv.Value.connection, monster.Info);
             }
         }
     }

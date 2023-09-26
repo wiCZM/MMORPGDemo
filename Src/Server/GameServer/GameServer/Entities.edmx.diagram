@@ -10,10 +10,14 @@
         <AssociationConnector Association="ExtremeWorldModel.UserPlayer" />
         <EntityTypeShape EntityType="ExtremeWorldModel.TCharacter" Width="1.5" PointX="7.25" PointY="2.75" />
         <AssociationConnector Association="ExtremeWorldModel.PlayerCharacter" />
-        <EntityTypeShape EntityType="ExtremeWorldModel.TCharacterItem" Width="1.5" PointX="9.875" PointY="3" />
+        <EntityTypeShape EntityType="ExtremeWorldModel.TCharacterItem" Width="1.875" PointX="9.875" PointY="3" />
         <AssociationConnector Association="ExtremeWorldModel.CharacterItem" />
-        <EntityTypeShape EntityType="ExtremeWorldModel.TCharacterBag" Width="1.5" PointX="10.375" PointY="5.375" />
+        <EntityTypeShape EntityType="ExtremeWorldModel.TCharacterBag" Width="1.875" PointX="9.875" PointY="5.125" />
         <AssociationConnector Association="ExtremeWorldModel.CharacterBag" />
+        <EntityTypeShape EntityType="ExtremeWorldModel.TCharacterQuest" Width="1.875" PointX="9.875" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="ExtremeWorldModel.CharacterQuest" />
+        <EntityTypeShape EntityType="ExtremeWorldModel.TCharacterFriend" Width="1.875" PointX="9.875" PointY="10" />
+        <AssociationConnector Association="ExtremeWorldModel.CharacterFriend" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

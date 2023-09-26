@@ -43,7 +43,7 @@ public class TeleporterObject : MonoBehaviour {
                 Debug.LogErrorFormat("TeleporterObject:Character [{0}] Enter Teleporter [{1}], But ReleporterDefine not existed", playerController.character.Info.Name, this.ID);
                 return;
             }
-            Debug.LogErrorFormat("TeleporterObject:Character [{0}] Enter Teleporter [{1}:{2}]", playerController.character.Info.Name, this.ID, td.Name);
+            Debug.LogErrorFormat("TeleporterObject:Character [{0}] Enter Teleporter [{1} : {2}]", playerController.character.Info.Name, td.ID,td.Name);
             if (td.LinkTo > 0)
             {
                 if (DataManager.Instance.Teleporters.ContainsKey(td.LinkTo))
@@ -53,5 +53,4 @@ public class TeleporterObject : MonoBehaviour {
             }
         }
     }
-
 }

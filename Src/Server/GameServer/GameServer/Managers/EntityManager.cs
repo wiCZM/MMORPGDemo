@@ -31,6 +31,11 @@ namespace GameServer.Managers
             entities.Add(entity);
         }
 
+        internal void AddEntity(int iD, object monster)
+        {
+            throw new NotImplementedException();
+        }
+
         public void RemoveEntity(int mapId, Entity entity)
         {
             this.AllEntities.Remove(entity);

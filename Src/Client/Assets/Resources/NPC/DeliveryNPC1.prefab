@@ -380,7 +380,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4578622035566598}
   - component: {fileID: 95323388628305094}
-  - component: {fileID: 114817218137897216}
+  - component: {fileID: 65427773905449720}
+  - component: {fileID: 114342429335333318}
   m_Layer: 0
   m_Name: DeliveryNPC1
   m_TagString: Untagged
@@ -1090,7 +1091,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1544969772077402}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -319.14, y: -272.76, z: 49.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4507463823670904}
@@ -1321,6 +1322,18 @@ Transform:
   m_Father: {fileID: 4507463823670904}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65427773905449720
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1544969772077402}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.8228316, z: 1}
+  m_Center: {x: 0, y: 0.9039967, z: 0}
 --- !u!95 &95323388628305094
 Animator:
   serializedVersion: 3
@@ -1339,7 +1352,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114817218137897216
+--- !u!114 &114342429335333318
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1350,6 +1363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8708c18170b5344e971f8e2b60da158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcId: 3
 --- !u!137 &137593220642558588
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

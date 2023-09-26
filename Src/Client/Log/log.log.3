@@ -1,58 +1,342 @@
-2023-08-31 18:33:49,684 [ 1] INFO  Unity: LoadingManager start
-2023-08-31 18:33:53,137 [ 1] INFO  Unity: DataManager > DataManager()
-2023-08-31 18:33:53,286 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{FormatException: Input string was not in the correct format, System.Int32.Parse (System.String s, NumberStyles style, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:640)
-System.Int32.Parse (System.String s, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:208)
-System.Convert.ToInt32 (System.String value, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:1277)
-System.String.System.IConvertible.ToInt32 (IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:2391)
-System.Convert.ToType (System.Object value, System.Type conversionType, IFormatProvider provider, Boolean try_target_to_type) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2910)
-System.Convert.ChangeType (System.Object value, System.Type conversionType, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2511)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
-Rethrow as JsonSerializationException: Error converting value "ID" to type 'System.Int32'. Path '1.ID', line 3, position 9.
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
-Rethrow as JsonSerializationException: Could not convert string 'ID' to dictionary key type 'System.Int32'. Create a TypeConverter to convert from the string to the key type object. Path '1.ID', line 3, position 9.
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
+2023-09-24 23:44:23,859 [ 1] INFO  Unity: LoadingManager start
+2023-09-24 23:44:26,990 [ 1] INFO  Unity: DataManager > DataManager()
+2023-09-24 23:44:32,547 [ 1] INFO  Unity: UserLoginRequest::user :1 psw:1
+2023-09-24 23:44:32,549 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-09-24 23:44:32,550 [ 1] INFO  Unity: DoConnect
+2023-09-24 23:44:32,552 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-09-24 23:44:32,554 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
+
+2023-09-24 23:44:32,558 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-09-24 23:44:33,301 [ 1] INFO  Unity: OnLogin:Success [None]
+2023-09-24 23:44:33,303 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-09-24 23:44:33,568 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-09-24 23:44:33,986 [ 1] INFO  Unity: Select Char:[1]11[Warrior]
+2023-09-24 23:44:34,670 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2023-09-24 23:44:34,815 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2023-09-24 23:44:34,818 [ 1] INFO  Unity: ItemManager: Init[Id:1,Count:20]
+2023-09-24 23:44:34,819 [ 1] INFO  Unity: ItemManager: Init[Id:2,Count:20]
+2023-09-24 23:44:34,820 [ 1] INFO  Unity: ItemManager: Init[Id:1001,Count:1]
+2023-09-24 23:44:34,820 [ 1] INFO  Unity: ItemManager: Init[Id:1002,Count:2]
+2023-09-24 23:44:34,822 [ 1] INFO  Unity: ItemManager.Instance: True
+2023-09-24 23:44:34,824 [ 1] INFO  Unity: Reset: Setting ItemId 1 with count 20 at index 0
+2023-09-24 23:44:34,826 [ 1] INFO  Unity: Reset: Setting ItemId 2 with count 20 at index 1
+2023-09-24 23:44:34,827 [ 1] INFO  Unity: Reset: Setting ItemId 1001 with count 1 at index 2
+2023-09-24 23:44:34,828 [ 1] INFO  Unity: Reset: Setting ItemId 1002 with count 2 at index 4
+2023-09-24 23:44:34,836 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
+2023-09-24 23:44:34,838 [ 1] INFO  Unity: AddCharacter:1:11 Map:1 Entity:(9:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-09-24 23:44:34,841 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-09-24 23:44:35,459 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2023-09-24 23:44:35,459 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2023-09-24 23:44:35,615 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-09-24 23:44:35,630 [ 1] WARN  Unity: UIMinimap Start221092
+UnityEngine.Debug:LogWarning(Object)
+UIMinimap:Start() (at Assets/Scripts/UI/Minimap/UIMinimap.cs:20)
+
+2023-09-24 23:44:37,051 [ 1] INFO  Unity: MoveForward
+2023-09-24 23:44:37,053 [ 1] INFO  Unity: MoveForward
+2023-09-24 23:44:37,093 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:MoveFwd entity:(0:pos:(0,0,0),dir:(0,100,0),spd:300
+
+2023-09-24 23:44:37,216 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(0,0,0),dir:(-19,98,0),spd:300
+
+2023-09-24 23:44:37,232 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-1,52,0),dir:(-19,98,0),spd:300
+
+2023-09-24 23:44:37,323 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-1,52,0),dir:(-36,93,0),spd:300
+
+2023-09-24 23:44:37,401 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-15,101,0),dir:(-52,85,0),spd:300
+
+2023-09-24 23:44:37,418 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-15,101,0),dir:(-52,85,0),spd:300
+
+2023-09-24 23:44:37,522 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-15,101,0),dir:(-67,74,0),spd:300
+
+2023-09-24 23:44:37,555 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-44,143,0),dir:(-67,74,0),spd:300
+
+2023-09-24 23:44:37,727 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-79,182,0),dir:(-67,74,0),spd:300
+
+2023-09-24 23:44:37,894 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-114,220,0),dir:(-67,74,0),spd:300
+
+2023-09-24 23:44:37,971 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-114,220,0),dir:(-53,85,0),spd:300
+
+2023-09-24 23:44:38,053 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-114,220,0),dir:(-37,93,0),spd:300
+
+2023-09-24 23:44:38,073 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-143,262,0),dir:(-37,93,0),spd:300
+
+2023-09-24 23:44:38,163 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-143,262,0),dir:(-17,99,0),spd:300
+
+2023-09-24 23:44:38,240 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-157,312,0),dir:(4,100,0),spd:300
+
+2023-09-24 23:44:38,274 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-157,312,0),dir:(4,100,0),spd:300
+
+2023-09-24 23:44:38,373 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-157,312,0),dir:(22,97,0),spd:300
+
+2023-09-24 23:44:38,408 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-153,363,0),dir:(22,97,0),spd:300
+
+2023-09-24 23:44:38,527 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-153,363,0),dir:(39,92,0),spd:300
+
+2023-09-24 23:44:38,586 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-139,412,0),dir:(39,92,0),spd:300
+
+2023-09-24 23:44:38,774 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-115,469,0),dir:(39,92,0),spd:300
+
+2023-09-24 23:44:38,909 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-115,469,0),dir:(55,84,0),spd:300
+
+2023-09-24 23:44:38,946 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-93,516,0),dir:(55,84,0),spd:300
+
+2023-09-24 23:44:39,034 [ 1] INFO  Unity: Stop
+2023-09-24 23:44:39,035 [ 1] INFO  Unity: Stop
+2023-09-24 23:44:39,077 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:Idle entity:(0:pos:(-93,516,0),dir:(55,84,0),spd:0
+
+2023-09-24 23:44:50,428 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
+2023-09-24 23:44:50,430 [ 1] INFO  Unity: AddCharacter:9:大户 Map:1 Entity:(10:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-09-24 23:44:50,432 [ 1] INFO  Unity: OnFriendList
+2023-09-24 23:44:51,925 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(0,0,0),dir:(-20,98,0),spd:0
+
+2023-09-24 23:44:51,926 [ 1] INFO  Unity: OnFriendList
+2023-09-24 23:44:51,941 [ 1] INFO  Unity: OnEntityChanged:ID:10 POS:(5000, 4000, 820) DIR:(98, 20, 0) SPO:0
+2023-09-24 23:44:51,943 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [10]evt:None entity:(10:pos:(5000,4000,820),dir:(98,20,0),spd:0
+
+2023-09-24 23:44:51,944 [ 1] INFO  Unity: OnFriendList
+2023-09-24 23:44:52,035 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(0,0,0),dir:(-39,92,0),spd:0
+
+2023-09-24 23:44:52,049 [ 1] INFO  Unity: OnEntityChanged:ID:10 POS:(5000, 4000, 820) DIR:(92, 39, 0) SPO:0
+2023-09-24 23:44:52,051 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [10]evt:None entity:(10:pos:(5000,4000,820),dir:(92,39,0),spd:0
+
+2023-09-24 23:44:52,052 [ 1] INFO  Unity: OnFriendList
+2023-09-24 23:44:52,232 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(0,0,0),dir:(-54,84,0),spd:0
+
+2023-09-24 23:44:52,243 [ 1] INFO  Unity: OnEntityChanged:ID:10 POS:(5000, 4000, 820) DIR:(84, 54, 0) SPO:0
+2023-09-24 23:44:52,245 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [10]evt:None entity:(10:pos:(5000,4000,820),dir:(84,54,0),spd:0
+
+2023-09-24 23:44:52,246 [ 1] INFO  Unity: OnFriendList
+2023-09-24 23:45:03,305 [ 1] INFO  Unity: SendTeamInviteRequest
+2023-09-24 23:45:09,833 [ 1] INFO  Unity: OnFriendList
+2023-09-24 23:45:09,839 [ 1] INFO  Unity: OnTeamInviteRequest
+2023-09-24 23:45:11,883 [ 1] INFO  Unity: SendTeamInviteResponse
+2023-09-24 23:45:11,905 [ 1] INFO  Unity: OnTeamInviteResponse
+2023-09-24 23:45:14,989 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-93,516,0),dir:(69,73,0),spd:0
+
+2023-09-24 23:45:14,990 [ 1] INFO  Unity: OnFriendList
+2023-09-24 23:45:14,991 [ 1] ERROR Unity: Message handler exception:, The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., Assembly-CSharp,   at (wrapper managed-to-native) UnityEngine.Component:get_transform ()
+  at UIFriends.InitFriendItems () [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:114 
+  at UIFriends.RefreshUI () [0x00008] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:103 
+  at Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Services\FriendService.cs:100 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) [0x00044] in D:\T2\Unity\Demo\Mymmorpg\Src\Lib\Common\Network\MessageDistributer.cs:105 
+2023-09-24 23:45:14,994 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{MissingReferenceException: The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., UIFriends.InitFriendItems () (at Assets/Scripts/UI/Friends/UIFriends.cs:114)
+UIFriends.RefreshUI () (at Assets/Scripts/UI/Friends/UIFriends.cs:103)
+Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) (at Assets/Scripts/Services/FriendService.cs:100)
+Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) (at D:/T2/Unity/Demo/Mymmorpg/Src/Lib/Common/Network/MessageDistributer.cs:105)
 }</args></log4net.Error>
-2023-08-31 18:34:04,353 [ 1] INFO  Unity: UserLoginRequest::user :12345 psw:12345
-2023-08-31 18:34:04,355 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-08-31 18:34:04,356 [ 1] INFO  Unity: DoConnect
-2023-08-31 18:34:04,358 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
-2023-08-31 18:34:04,360 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
+2023-09-24 23:45:15,110 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-93,516,0),dir:(82,58,0),spd:0
 
-2023-08-31 18:34:04,363 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-08-31 18:34:05,636 [ 1] INFO  Unity: UserLoginRequest::user :12345 psw:12345
-2023-08-31 18:34:05,681 [ 1] INFO  Unity: ProcessSend exception:System.InvalidOperationException: Duplicate field-number detected; 9 on: SkillBridge.Message.NetMessageRequest
-at ProtoBuf.Serializers.TypeSerializer..ctor (ProtoBuf.Meta.TypeModel,System.Type,int[],ProtoBuf.Serializers.IProtoSerializer[],System.Reflection.MethodInfo[],bool,bool,ProtoBuf.Meta.CallbackSet,System.Type,System.Reflection.MethodInfo) <IL 0x00049, 0x00277>
-at ProtoBuf.Meta.MetaType.BuildSerializer () <IL 0x00315, 0x019bc>
-at ProtoBuf.Meta.MetaType.get_Serializer () <IL 0x0002a, 0x00149>
-at ProtoBuf.Meta.RuntimeTypeModel.Serialize (int,object,ProtoBuf.ProtoWriter) <IL 0x00011, 0x000c2>
-at ProtoBuf.ProtoWriter.WriteObject (object,int,ProtoBuf.ProtoWriter) <IL 0x00036, 0x0021a>
-at (wrapper dynamic-method) SkillBridge.Message.NetMessage.proto_1 (object,ProtoBuf.ProtoWriter) <IL 0x00050, 0x001ee>
-at ProtoBuf.Serializers.CompiledSerializer.ProtoBuf.Serializers.IProtoSerializer.Write (object,ProtoBuf.ProtoWriter) <IL 0x00008, 0x0005c>
-at ProtoBuf.Meta.RuntimeTypeModel.Serialize (int,object,ProtoBuf.ProtoWriter) <IL 0x00018, 0x000f1>
-at ProtoBuf.Meta.TypeModel.SerializeCore (ProtoBuf.ProtoWriter,object) <IL 0x00026, 0x0019c>
-at ProtoBuf.Meta.TypeModel.Serialize (System.IO.Stream,object,ProtoBuf.SerializationContext) <IL 0x00013, 0x000e7>
-at ProtoBuf.Meta.TypeModel.Serialize (System.IO.Stream,object) <IL 0x00004, 0x0005f>
-at ProtoBuf.Serializer.Serialize<SkillBridge.Message.NetMessage> (System.IO.Stream,SkillBridge.Message.NetMessage) <0x000a2>
-at Network.PackageHandler`1<object>.PackMessage (SkillBridge.Message.NetMessage) [0x0000a] in D:\T2\Unity\Demo\Mymmorpg\Src\Lib\Common\Network\PackageHandler.cs:91
-at Network.NetClient.ProcessSend () [0x0013e] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:403
+2023-09-24 23:45:15,111 [ 1] INFO  Unity: OnFriendList
+2023-09-24 23:45:15,112 [ 1] ERROR Unity: Message handler exception:, The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., Assembly-CSharp,   at (wrapper managed-to-native) UnityEngine.Component:get_transform ()
+  at UIFriends.InitFriendItems () [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:114 
+  at UIFriends.RefreshUI () [0x00008] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:103 
+  at Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Services\FriendService.cs:100 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) [0x00044] in D:\T2\Unity\Demo\Mymmorpg\Src\Lib\Common\Network\MessageDistributer.cs:105 
+2023-09-24 23:45:15,112 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{MissingReferenceException: The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., UIFriends.InitFriendItems () (at Assets/Scripts/UI/Friends/UIFriends.cs:114)
+UIFriends.RefreshUI () (at Assets/Scripts/UI/Friends/UIFriends.cs:103)
+Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) (at Assets/Scripts/Services/FriendService.cs:100)
+Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) (at D:/T2/Unity/Demo/Mymmorpg/Src/Lib/Common/Network/MessageDistributer.cs:105)
+}</args></log4net.Error>
+2023-09-24 23:45:15,200 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-93,516,0),dir:(92,40,0),spd:0
 
+2023-09-24 23:45:15,201 [ 1] INFO  Unity: OnFriendList
+2023-09-24 23:45:15,202 [ 1] ERROR Unity: Message handler exception:, The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., Assembly-CSharp,   at (wrapper managed-to-native) UnityEngine.Component:get_transform ()
+  at UIFriends.InitFriendItems () [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:114 
+  at UIFriends.RefreshUI () [0x00008] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:103 
+  at Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Services\FriendService.cs:100 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) [0x00044] in D:\T2\Unity\Demo\Mymmorpg\Src\Lib\Common\Network\MessageDistributer.cs:105 
+2023-09-24 23:45:15,202 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{MissingReferenceException: The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., UIFriends.InitFriendItems () (at Assets/Scripts/UI/Friends/UIFriends.cs:114)
+UIFriends.RefreshUI () (at Assets/Scripts/UI/Friends/UIFriends.cs:103)
+Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) (at Assets/Scripts/Services/FriendService.cs:100)
+Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) (at D:/T2/Unity/Demo/Mymmorpg/Src/Lib/Common/Network/MessageDistributer.cs:105)
+}</args></log4net.Error>
+2023-09-24 23:45:15,333 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-93,516,0),dir:(97,23,0),spd:0
 
-2023-08-31 18:34:05,682 [ 1] WARN  Unity: CloseConnection(), errorCode: 1000
+2023-09-24 23:45:15,334 [ 1] INFO  Unity: OnFriendList
+2023-09-24 23:45:15,335 [ 1] ERROR Unity: Message handler exception:, The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., Assembly-CSharp,   at (wrapper managed-to-native) UnityEngine.Component:get_transform ()
+  at UIFriends.InitFriendItems () [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:114 
+  at UIFriends.RefreshUI () [0x00008] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:103 
+  at Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Services\FriendService.cs:100 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) [0x00044] in D:\T2\Unity\Demo\Mymmorpg\Src\Lib\Common\Network\MessageDistributer.cs:105 
+2023-09-24 23:45:15,335 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{MissingReferenceException: The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., UIFriends.InitFriendItems () (at Assets/Scripts/UI/Friends/UIFriends.cs:114)
+UIFriends.RefreshUI () (at Assets/Scripts/UI/Friends/UIFriends.cs:103)
+Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) (at Assets/Scripts/Services/FriendService.cs:100)
+Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) (at D:/T2/Unity/Demo/Mymmorpg/Src/Lib/Common/Network/MessageDistributer.cs:105)
+}</args></log4net.Error>
+2023-09-24 23:45:23,551 [ 1] INFO  Unity: SendTeamInviteRequest
+2023-09-24 23:46:39,544 [ 1] INFO  Unity: OnFriendList
+2023-09-24 23:46:39,545 [ 1] ERROR Unity: Message handler exception:, The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., Assembly-CSharp,   at (wrapper managed-to-native) UnityEngine.Component:get_transform ()
+  at UIFriends.InitFriendItems () [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:114 
+  at UIFriends.RefreshUI () [0x00008] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:103 
+  at Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Services\FriendService.cs:100 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) [0x00044] in D:\T2\Unity\Demo\Mymmorpg\Src\Lib\Common\Network\MessageDistributer.cs:105 
+2023-09-24 23:46:39,546 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{MissingReferenceException: The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., UIFriends.InitFriendItems () (at Assets/Scripts/UI/Friends/UIFriends.cs:114)
+UIFriends.RefreshUI () (at Assets/Scripts/UI/Friends/UIFriends.cs:103)
+Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) (at Assets/Scripts/Services/FriendService.cs:100)
+Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) (at D:/T2/Unity/Demo/Mymmorpg/Src/Lib/Common/Network/MessageDistributer.cs:105)
+}</args></log4net.Error>
+2023-09-24 23:46:49,235 [ 1] INFO  Unity: MoveForward
+2023-09-24 23:46:49,235 [ 1] INFO  Unity: MoveForward
+2023-09-24 23:46:49,283 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:MoveFwd entity:(0:pos:(-93,516,0),dir:(97,23,0),spd:300
+
+2023-09-24 23:46:49,284 [ 1] INFO  Unity: OnFriendList
+2023-09-24 23:46:49,285 [ 1] ERROR Unity: Message handler exception:, The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., Assembly-CSharp,   at (wrapper managed-to-native) UnityEngine.Component:get_transform ()
+  at UIFriends.InitFriendItems () [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:114 
+  at UIFriends.RefreshUI () [0x00008] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:103 
+  at Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Services\FriendService.cs:100 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) [0x00044] in D:\T2\Unity\Demo\Mymmorpg\Src\Lib\Common\Network\MessageDistributer.cs:105 
+2023-09-24 23:46:49,285 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{MissingReferenceException: The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., UIFriends.InitFriendItems () (at Assets/Scripts/UI/Friends/UIFriends.cs:114)
+UIFriends.RefreshUI () (at Assets/Scripts/UI/Friends/UIFriends.cs:103)
+Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) (at Assets/Scripts/Services/FriendService.cs:100)
+Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) (at D:/T2/Unity/Demo/Mymmorpg/Src/Lib/Common/Network/MessageDistributer.cs:105)
+}</args></log4net.Error>
+2023-09-24 23:46:49,321 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-53,551,0),dir:(97,23,0),spd:300
+
+2023-09-24 23:46:49,322 [ 1] INFO  Unity: OnFriendList
+2023-09-24 23:46:49,323 [ 1] ERROR Unity: Message handler exception:, The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., Assembly-CSharp,   at (wrapper managed-to-native) UnityEngine.Component:get_transform ()
+  at UIFriends.InitFriendItems () [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:114 
+  at UIFriends.RefreshUI () [0x00008] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:103 
+  at Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Services\FriendService.cs:100 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) [0x00044] in D:\T2\Unity\Demo\Mymmorpg\Src\Lib\Common\Network\MessageDistributer.cs:105 
+2023-09-24 23:46:49,323 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{MissingReferenceException: The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., UIFriends.InitFriendItems () (at Assets/Scripts/UI/Friends/UIFriends.cs:114)
+UIFriends.RefreshUI () (at Assets/Scripts/UI/Friends/UIFriends.cs:103)
+Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) (at Assets/Scripts/Services/FriendService.cs:100)
+Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) (at D:/T2/Unity/Demo/Mymmorpg/Src/Lib/Common/Network/MessageDistributer.cs:105)
+}</args></log4net.Error>
+2023-09-24 23:46:49,489 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-3,563,0),dir:(97,23,0),spd:300
+
+2023-09-24 23:46:49,490 [ 1] INFO  Unity: OnFriendList
+2023-09-24 23:46:49,490 [ 1] ERROR Unity: Message handler exception:, The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., Assembly-CSharp,   at (wrapper managed-to-native) UnityEngine.Component:get_transform ()
+  at UIFriends.InitFriendItems () [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:114 
+  at UIFriends.RefreshUI () [0x00008] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:103 
+  at Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Services\FriendService.cs:100 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) [0x00044] in D:\T2\Unity\Demo\Mymmorpg\Src\Lib\Common\Network\MessageDistributer.cs:105 
+2023-09-24 23:46:49,492 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{MissingReferenceException: The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., UIFriends.InitFriendItems () (at Assets/Scripts/UI/Friends/UIFriends.cs:114)
+UIFriends.RefreshUI () (at Assets/Scripts/UI/Friends/UIFriends.cs:103)
+Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) (at Assets/Scripts/Services/FriendService.cs:100)
+Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) (at D:/T2/Unity/Demo/Mymmorpg/Src/Lib/Common/Network/MessageDistributer.cs:105)
+}</args></log4net.Error>
+2023-09-24 23:46:49,549 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(-3,563,0),dir:(100,5,0),spd:300
+
+2023-09-24 23:46:49,550 [ 1] INFO  Unity: OnFriendList
+2023-09-24 23:46:49,551 [ 1] ERROR Unity: Message handler exception:, The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., Assembly-CSharp,   at (wrapper managed-to-native) UnityEngine.Component:get_transform ()
+  at UIFriends.InitFriendItems () [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:114 
+  at UIFriends.RefreshUI () [0x00008] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:103 
+  at Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Services\FriendService.cs:100 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) [0x00044] in D:\T2\Unity\Demo\Mymmorpg\Src\Lib\Common\Network\MessageDistributer.cs:105 
+2023-09-24 23:46:49,551 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{MissingReferenceException: The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., UIFriends.InitFriendItems () (at Assets/Scripts/UI/Friends/UIFriends.cs:114)
+UIFriends.RefreshUI () (at Assets/Scripts/UI/Friends/UIFriends.cs:103)
+Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) (at Assets/Scripts/Services/FriendService.cs:100)
+Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) (at D:/T2/Unity/Demo/Mymmorpg/Src/Lib/Common/Network/MessageDistributer.cs:105)
+}</args></log4net.Error>
+2023-09-24 23:46:49,649 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(48,569,0),dir:(100,5,0),spd:300
+
+2023-09-24 23:46:49,650 [ 1] INFO  Unity: OnFriendList
+2023-09-24 23:46:49,651 [ 1] ERROR Unity: Message handler exception:, The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., Assembly-CSharp,   at (wrapper managed-to-native) UnityEngine.Component:get_transform ()
+  at UIFriends.InitFriendItems () [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:114 
+  at UIFriends.RefreshUI () [0x00008] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:103 
+  at Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Services\FriendService.cs:100 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) [0x00044] in D:\T2\Unity\Demo\Mymmorpg\Src\Lib\Common\Network\MessageDistributer.cs:105 
+2023-09-24 23:46:49,652 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{MissingReferenceException: The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., UIFriends.InitFriendItems () (at Assets/Scripts/UI/Friends/UIFriends.cs:114)
+UIFriends.RefreshUI () (at Assets/Scripts/UI/Friends/UIFriends.cs:103)
+Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) (at Assets/Scripts/Services/FriendService.cs:100)
+Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) (at D:/T2/Unity/Demo/Mymmorpg/Src/Lib/Common/Network/MessageDistributer.cs:105)
+}</args></log4net.Error>
+2023-09-24 23:46:49,673 [ 1] INFO  Unity: Stop
+2023-09-24 23:46:49,674 [ 1] INFO  Unity: Stop
+2023-09-24 23:46:49,713 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:Idle entity:(0:pos:(48,569,0),dir:(100,5,0),spd:0
+
+2023-09-24 23:46:49,714 [ 1] INFO  Unity: OnFriendList
+2023-09-24 23:46:49,717 [ 1] ERROR Unity: Message handler exception:, The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., Assembly-CSharp,   at (wrapper managed-to-native) UnityEngine.Component:get_transform ()
+  at UIFriends.InitFriendItems () [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:114 
+  at UIFriends.RefreshUI () [0x00008] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:103 
+  at Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) [0x0002c] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Services\FriendService.cs:100 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) [0x00044] in D:\T2\Unity\Demo\Mymmorpg\Src\Lib\Common\Network\MessageDistributer.cs:105 
+2023-09-24 23:46:49,717 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{MissingReferenceException: The object of type 'ListView' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., UIFriends.InitFriendItems () (at Assets/Scripts/UI/Friends/UIFriends.cs:114)
+UIFriends.RefreshUI () (at Assets/Scripts/UI/Friends/UIFriends.cs:103)
+Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) (at Assets/Scripts/Services/FriendService.cs:100)
+Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) (at D:/T2/Unity/Demo/Mymmorpg/Src/Lib/Common/Network/MessageDistributer.cs:105)
+}</args></log4net.Error>
+2023-09-24 23:47:04,869 [ 1] INFO  Unity: Character_1_11 OnDestroy :ID:9 POS:(5562, 3935, 820) DIR:(5, -100, 0) SPD:0 
+2023-09-24 23:47:04,870 [ 1] INFO  Unity: Character_9_大户 OnDestroy :ID:10 POS:(5000, 4000, 820) DIR:(84, 54, 0) SPD:0 
+2023-09-24 23:47:04,875 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-09-24 23:47:04,876 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:ProcessSend() (at Assets/Scripts/Network/NetClient.cs:412)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
-
-2023-08-31 18:34:05,692 [ 1] INFO  Unity: DoConnect
-2023-08-31 18:34:05,693 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
-2023-08-31 18:34:05,694 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
-
-2023-08-31 18:34:05,694 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-08-31 18:34:32,382 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-08-31 18:34:32,382 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:172)
 

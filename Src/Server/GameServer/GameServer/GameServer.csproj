@@ -38,6 +38,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -112,11 +113,23 @@
     <Compile Include="Managers\CharacterManager.cs" />
     <Compile Include="Managers\DataManager.cs" />
     <Compile Include="Managers\EntityManager.cs" />
+    <Compile Include="Managers\EquipManager.cs" />
+    <Compile Include="Managers\FriendManager.cs" />
     <Compile Include="Managers\ItemManager.cs" />
     <Compile Include="Managers\MapManager.cs" />
+    <Compile Include="Managers\QuestManager.cs" />
+    <Compile Include="Managers\SessionManager.cs" />
+    <Compile Include="Managers\Spawner.cs" />
+    <Compile Include="Managers\SpawnManager.cs" />
+    <Compile Include="Managers\StatusManager.cs" />
+    <Compile Include="Managers\TeamManager.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Map.cs" />
+    <Compile Include="Managers\MonsterManager.cs" />
+    <Compile Include="Models\Team.cs" />
     <Compile Include="Network\ExtensionMethods.cs" />
+    <Compile Include="Network\INetSession.cs" />
+    <Compile Include="Network\IPostResponse.cs" />
     <Compile Include="Network\NetConnection.cs" />
     <Compile Include="Network\NetEventArgs.cs" />
     <Compile Include="Network\NetService.cs" />
@@ -131,7 +144,12 @@
     </Compile>
     <Compile Include="Services\BagService.cs" />
     <Compile Include="Services\DBService.cs" />
+    <Compile Include="Services\FriendService.cs" />
+    <Compile Include="Services\ItemService.cs" />
     <Compile Include="Services\MapService.cs" />
+    <Compile Include="Managers\ShopManager.cs" />
+    <Compile Include="Services\QuestService.cs" />
+    <Compile Include="Services\TeamService.cs" />
     <Compile Include="Services\UserSerevice.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Core\Vector3Int.cs" />
@@ -141,7 +159,13 @@
     <Compile Include="TCharacterBag.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="TCharacterFriend.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="TCharacterItem.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TCharacterQuest.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="TPlayer.cs">

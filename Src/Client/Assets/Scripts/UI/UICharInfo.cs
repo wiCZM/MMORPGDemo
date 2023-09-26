@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using SkillBridge.Message;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,7 +7,7 @@ using UnityEngine.UI;
 public class UICharInfo : MonoBehaviour {
 
 
-    public SkillBridge.Message.NCharacterInfo info;
+    public NCharacterInfo info;
 
     public Text charClass;
     public Text charName;

@@ -6,7 +6,7 @@
     "LinkTo": 6,
     "Descript": null,
     "Position": {
-      "X": 740,
+      "X": 7320,
       "Y": 2600,
       "Z": 984
     },
@@ -23,7 +23,7 @@
     "LinkTo": 8,
     "Descript": null,
     "Position": {
-      "X": 7320,
+      "X": 740,
       "Y": 2600,
       "Z": 984
     },
@@ -40,12 +40,12 @@
     "LinkTo": 0,
     "Descript": null,
     "Position": {
-      "X": 1207,
+      "X": 6919,
       "Y": 2600,
       "Z": 800
     },
     "Direction": {
-      "X": 100,
+      "X": -100,
       "Y": 0,
       "Z": 0
     }
@@ -57,12 +57,12 @@
     "LinkTo": 0,
     "Descript": null,
     "Position": {
-      "X": 6919,
+      "X": 1207,
       "Y": 2600,
       "Z": 800
     },
     "Direction": {
-      "X": -100,
+      "X": 100,
       "Y": 0,
       "Z": 0
     }

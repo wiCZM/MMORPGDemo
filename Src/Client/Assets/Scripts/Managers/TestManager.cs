@@ -19,15 +19,14 @@ namespace Managers
 
         private bool OnNpcInvokeShop(NpcDefine npc)
         {
-            Debug.LogFormat("TestManager.OnNpcInvokeShop : NPC:{0 :{1} Type: {2} Funs:{3}",npc.ID,npc.Name,npc.Type,npc.Function);
-            UIManager.Instance.Show<UITest>();
+            Debug.LogFormat("TestManager.OnNpcInvokeShop : NPC:{0}, Name:{1}, Type: {2}, Funs:{3}", npc.ID,npc.Name,npc.Type,npc.Function);
+            //UIManager.Instance.Show<UITest>();
             return true;
         }
 
-
         private bool OnNpcInvokeInsrance(NpcDefine npc)
         {
-            Debug.LogFormat("TestManager.OnNpcInvokeInsrance : NPC:{0 :{1} Type: {2} Funs:{3}", npc.ID, npc.Name, npc.Type, npc.Function);
+            Debug.LogFormat("TestManager.OnNpcInvokeInsrance : NPC:{0}, Name:{1}, Type: {2}, Funs:{3}", npc.ID, npc.Name, npc.Type, npc.Function);
             MessageBox.Show("点击了NPC:" + npc.Name, "NPC对话");
             return true;
         }

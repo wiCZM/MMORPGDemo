@@ -1,0 +1,223 @@
+fileFormatVersion: 2
+guid: e81b58645b9e43c42aff17ccc726776f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Body
+    100002: Body2
+    100004: Body_002
+    100006: Body_003
+    100008: FU_1_L
+    100010: FU_1_R
+    100012: FU_2_L
+    100014: FU_2_R
+    100016: FU_3_L
+    100018: FU_3_R
+    100020: Hemi
+    100022: Spider
+    100024: //RootNode
+    100026: Spider_Armature
+    100028: Spider_Eyes
+    100030: Spider_Fur
+    100032: Spider_teeth
+    100034: v2_B1_L
+    100036: v2_B1_R
+    100038: v2_B2_L
+    100040: v2_B2_R
+    100042: v2_B3_L
+    100044: v2_B3_L_001
+    100046: v2_B3_R
+    100048: v2_B3_R_001
+    100050: v3_B1_L
+    100052: v3_B1_R
+    100054: v3_B2_L
+    100056: v3_B2_R
+    100058: v3_B3_L
+    100060: v3_B3_L_001
+    100062: v3_B3_R
+    100064: v3_B3_R_001
+    100066: v4_B1_L
+    100068: v4_B1_R
+    100070: v4_B2_L
+    100072: v4_B2_R
+    100074: v4_B3_L
+    100076: v4_B3_L_001
+    100078: v4_B3_R
+    100080: v4_B3_R_001
+    100082: v_B1_L
+    100084: v_B1_R
+    100086: v_B2_L
+    100088: v_B2_R
+    100090: v_B3_L
+    100092: v_B3_L_001
+    100094: v_B3_R
+    100096: v_B3_R_001
+    100098: Zahn_L
+    100100: Zahn_R
+    400000: Body
+    400002: Body2
+    400004: Body_002
+    400006: Body_003
+    400008: FU_1_L
+    400010: FU_1_R
+    400012: FU_2_L
+    400014: FU_2_R
+    400016: FU_3_L
+    400018: FU_3_R
+    400020: Hemi
+    400022: Spider
+    400024: //RootNode
+    400026: Spider_Armature
+    400028: Spider_Eyes
+    400030: Spider_Fur
+    400032: Spider_teeth
+    400034: v2_B1_L
+    400036: v2_B1_R
+    400038: v2_B2_L
+    400040: v2_B2_R
+    400042: v2_B3_L
+    400044: v2_B3_L_001
+    400046: v2_B3_R
+    400048: v2_B3_R_001
+    400050: v3_B1_L
+    400052: v3_B1_R
+    400054: v3_B2_L
+    400056: v3_B2_R
+    400058: v3_B3_L
+    400060: v3_B3_L_001
+    400062: v3_B3_R
+    400064: v3_B3_R_001
+    400066: v4_B1_L
+    400068: v4_B1_R
+    400070: v4_B2_L
+    400072: v4_B2_R
+    400074: v4_B3_L
+    400076: v4_B3_L_001
+    400078: v4_B3_R
+    400080: v4_B3_R_001
+    400082: v_B1_L
+    400084: v_B1_R
+    400086: v_B2_L
+    400088: v_B2_R
+    400090: v_B3_L
+    400092: v_B3_L_001
+    400094: v_B3_R
+    400096: v_B3_R_001
+    400098: Zahn_L
+    400100: Zahn_R
+    2100000: Spider_Eye
+    2100002: Spider
+    2100004: Spider__Spinnen_Bein_tex_jpg
+    2100006: Spider_teeth
+    2100008: Spider_Fur__SH3_png
+    2100010: Spider_Fur
+    4300000: Spider_Eyes
+    4300002: Spider
+    4300004: Spider_teeth
+    4300006: Spider_Fur
+    7400000: Default Take
+    7400002: Attack
+    7400004: die
+    7400006: die_2
+    7400008: fall
+    7400010: Jump
+    7400012: Mund
+    7400014: normal
+    7400016: run_ani_back
+    7400018: run_ani_vor
+    7400020: run_left
+    7400022: run_right
+    7400024: walk_ani_back
+    7400026: walk_ani_vor
+    7400028: walk_left
+    7400030: walk_right
+    7400032: warte_pose
+    9500000: //RootNode
+    10800000: Hemi
+    13700000: Spider
+    13700002: Spider_Eyes
+    13700004: Spider_Fur
+    13700006: Spider_teeth
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

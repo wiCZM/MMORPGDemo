@@ -14,7 +14,6 @@ namespace Services
 {
     class UserService : Singleton<UserService>, IDisposable
     {
-
         public UnityEngine.Events.UnityAction<Result, string> OnLogin;
         public UnityEngine.Events.UnityAction<Result, string> OnRegister;
         public UnityEngine.Events.UnityAction<Result, string> OnCharacterCreate;
@@ -32,7 +31,7 @@ namespace Services
             MessageDistributer.Instance.Subscribe<UserCreateCharacterResponse>(this.OnUserCreateCharacter);
             MessageDistributer.Instance.Subscribe<UserGameEnterResponse>(this.OnGameEnter);
             MessageDistributer.Instance.Subscribe<UserGameLeaveResponse>(this.OnGameLeave);
-            MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
+            //MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
 
         }
 
@@ -43,7 +42,7 @@ namespace Services
             MessageDistributer.Instance.Unsubscribe<UserCreateCharacterResponse>(this.OnUserCreateCharacter);
             MessageDistributer.Instance.Unsubscribe<UserGameEnterResponse>(this.OnGameEnter);
             MessageDistributer.Instance.Unsubscribe<UserGameLeaveResponse>(this.OnGameLeave);
-            MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
+            //MessageDistributer.Instance.Unsubscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
             NetClient.Instance.OnConnect -= OnGameServerConnect;
             NetClient.Instance.OnDisconnect -= OnGameServerDisconnect;
         }
@@ -60,8 +59,7 @@ namespace Services
             NetClient.Instance.Init("10.0.0.100", 8000);
             NetClient.Instance.Connect();
         }
-
-
+        
         void OnGameServerConnect(int result, string reason)
         {
             Log.InfoFormat("LoadingMesager::OnGameServerConnect :{0} reason:{1}", result, reason);
@@ -119,6 +117,43 @@ namespace Services
             return false;
         }
 
+        public void SendLogin(string user, string psw)
+        {
+            Debug.LogFormat("UserLoginRequest::user :{0} psw:{1}", user, psw);
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.userLogin = new UserLoginRequest();
+            message.Request.userLogin.User = user;
+            message.Request.userLogin.Passward = psw;
+
+            if (this.connected && NetClient.Instance.Connected)
+            {
+                this.pendingMessage = null;
+                NetClient.Instance.SendMessage(message);
+            }
+            else
+            {
+                this.pendingMessage = message;
+                this.ConnectToServer();
+            }
+        }
+
+        void OnUserLogin(object sender, UserLoginResponse response)
+        {
+            Debug.LogFormat("OnLogin:{0} [{1}]", response.Result, response.Errormsg);
+
+            if (response.Result == Result.Success)
+            {//登陆成功逻辑
+                Models.User.Instance.SetupUserInfo(response.Userinfo);
+            };
+            if (this.OnLogin != null)
+            {
+                this.OnLogin(response.Result, response.Errormsg);
+
+            }
+        }
+
+
         public void SendRegister(string user, string psw)
         {
             Debug.LogFormat("UserRegisterRequest::user :{0} psw:{1}", user, psw);
@@ -127,8 +162,6 @@ namespace Services
             message.Request.userRegister = new UserRegisterRequest();
             message.Request.userRegister.User = user;
             message.Request.userRegister.Passward = psw;
-
-
 
             if (this.connected && NetClient.Instance.Connected)
             {
@@ -149,42 +182,9 @@ namespace Services
             if (this.OnRegister != null)
             {
                 this.OnRegister(response.Result, response.Errormsg);
+
             }
         }
-
-
-        public void SendLogin(string user, string psw)
-        {
-            Debug.LogFormat("UserLoginRequest::user :{0} psw:{1}", user, psw);
-            NetMessage message = new NetMessage();
-            message.Request = new NetMessageRequest();
-            message.Request.userLogin = new UserLoginRequest(); // 假设有这样的请求
-            message.Request.userLogin.User = user;
-            message.Request.userLogin.Passward = psw;
-
-            if (this.connected && NetClient.Instance.Connected)
-            {
-                NetClient.Instance.SendMessage(message);
-            }
-            else
-            {
-                this.ConnectToServer();
-            }
-        }
-
-        void OnUserLogin(object sender, UserLoginResponse response)
-        {
-            Debug.LogFormat("OnUserLogin:{0} [{1}]", response.Result, response.Errormsg);
-            if (response.Result == Result.Success)
-            {//登陆成功逻辑
-                Models.User.Instance.SetupUserInfo(response.Userinfo);
-            };
-            if (this.OnLogin != null)
-            {
-                this.OnLogin(response.Result, response.Errormsg);
-            }
-        }
-
 
         public void SendCharacterCreate(string name, CharacterClass cls)
         {
@@ -210,7 +210,9 @@ namespace Services
 
         private void OnCharacterEnter(object sender, MapCharacterEnterResponse message)
         {
-            Debug.LogFormat("OnCharacterEnter:{0}", message.mapId);
+            Debug.LogFormat("OnMapCharacterEnter:{0}", message.mapId);
+            NCharacterInfo info = message.Characters[0];
+            User.Instance.CurrentCharacter = info;
             SceneManager.Instance.LoadScene(DataManager.Instance.Maps[message.mapId].Resource);
         }
 
@@ -249,12 +251,15 @@ namespace Services
             {
                 if (response.Character != null)
                 {
+                    User.Instance.CurrentCharacter = response.Character;
                     ItemManager.Instance.Init(response.Character.Items);
-                    BagManager.Instance.Init(response.Character.BagInfo);
+                    BagManager.Instance.Init(response.Character.Bag);
+                    EquipManager.Instance.Init(response.Character.Equips);
+                    QuestManager.Instance.Init(response.Character.Quests);
+                    FriendManager.Instance.Init(response.Character.Friends);
                 }
             }
         }
-
 
         public void SendGameLeave()
         {

@@ -1,12 +1,11 @@
-﻿using System.Collections;
+﻿using Models;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UICharacterView : MonoBehaviour {
-
+public class UICharacterView : MonoBehaviour
+{
     public GameObject[] characters;
-
-
     private int currentCharacter = 0;
 
     public int CurrectCharacter
@@ -22,12 +21,10 @@ public class UICharacterView : MonoBehaviour {
         }
     }
 
-	// Use this for initialization
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}

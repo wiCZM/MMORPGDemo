@@ -32,7 +32,7 @@ public class PlayerInputController : MonoBehaviour {
             NCharacterInfo cinfo = new NCharacterInfo();
             cinfo.Id = 1;
             cinfo.Name = "Test";
-            cinfo.Tid = 1;
+            cinfo.ConfigId = 1;
             cinfo.Entity = new NEntity();
             cinfo.Entity.Position = new NVector3();
             cinfo.Entity.Direction = new NVector3();

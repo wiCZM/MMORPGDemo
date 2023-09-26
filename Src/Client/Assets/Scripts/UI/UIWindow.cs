@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Models;
+using Services;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -29,6 +31,12 @@ public abstract class UIWindow : MonoBehaviour
     {
         this.Close();
     }
+
+    public virtual void OnNoClick()
+    {
+        this.Close(WindowResult.No);
+    }
+
     public virtual void OnYesClick()
     {
         this.Close(WindowResult.Yes);

@@ -28,7 +28,6 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
 
     void OnCharacterEnter(Character cha)
     {
-
         CreateCharacterObject(cha);
     }
 
@@ -52,9 +51,24 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
         }
     }
 
-
     private void CreateCharacterObject(Character character)
     {
+        // 检查CurrentCharacter的Id对应的GameObjectManager和UIWorldElementManager的实例数量
+        if (character.Info.Id == User.Instance.CurrentCharacter.Id)
+        {
+            int gameObjectManagerCount = GameObject.FindObjectsOfType<GameObjectManager>().Length;
+            int uiWorldElementManagerCount = GameObject.FindObjectsOfType<UIWorldElementManager>().Length;
+
+            if (gameObjectManagerCount > 1)
+            {
+                Debug.LogError("Multiple instances of GameObjectManager detected for CurrentCharacter's Id: " + character.Info.Id);
+            }
+
+            if (uiWorldElementManagerCount > 1)
+            {
+                Debug.LogError("Multiple instances of UIWorldElementManager detected for CurrentCharacter's Id: " + character.Info.Id);
+            }
+        }
         if (!Characters.ContainsKey(character.entityId) || Characters[character.entityId] == null)
         {
             Object obj = Resloader.Load<Object>(character.Define.Resource);
@@ -81,14 +95,14 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
         if (ec != null)
         {
             ec.entity = character;
-            ec.isPlayer = character.IsPlayer;
+            ec.isPlayer = character.IsCurrentPlayer;
         }
 
         PlayerInputController pc = go.GetComponent<PlayerInputController>();
         if (pc != null)
         {
 
-            if (character.Info.Id == Models.User.Instance.CurrentCharacter.Id)
+            if (character.IsCurrentPlayer)
             {
                 User.Instance.CurrentCharacterObject = go;
                 MainPlayerCamera.Instance.player = go;

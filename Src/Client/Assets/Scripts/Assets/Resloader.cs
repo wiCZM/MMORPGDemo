@@ -10,4 +10,17 @@ class Resloader
     {
         return Resources.Load<T>(path);
     }
+
+    public static Sprite LoadSpriteFromAtlas(string atlasPath, string spriteName)
+    {
+        Sprite[] sprites = Resources.LoadAll<Sprite>(atlasPath);
+        foreach (Sprite sprite in sprites)
+        {
+            if (sprite.name == spriteName)
+            {
+                return sprite;
+            }
+        }
+        return null;
+    }
 }

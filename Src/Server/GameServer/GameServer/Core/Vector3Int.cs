@@ -246,6 +246,10 @@ namespace GameServer.Core
 
         public static implicit operator Vector3Int(NVector3 v)
         {
+            if (v == null)
+            {
+                throw new ArgumentNullException(nameof(v), "Parameter cannot be null");
+            }
             return new Vector3Int(v.X, v.Y, v.Z);
         }
 

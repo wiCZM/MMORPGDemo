@@ -17,7 +17,9 @@ public class UIMinimap : MonoBehaviour
 
     void Start()
     {
+        Debug.LogWarning("UIMinimap Start" + this.GetInstanceID());
         MinimapManager.Instance.minimap = this;
+        minimap.gameObject.SetActive(true);
         this.UpdateMap();
     }
 
@@ -25,7 +27,6 @@ public class UIMinimap : MonoBehaviour
     {
         this.mapName.text = User.Instance.CurrentMapData.Name;
         this.minimap.overrideSprite = MinimapManager.Instance.LoadCurrentMinimap();
-
         this.minimap.SetNativeSize();
         this.minimap.transform.localPosition = Vector3.zero;
         this.minimapBoundingBox = MinimapManager.Instance.MinimapBoundingBox;
@@ -36,6 +37,7 @@ public class UIMinimap : MonoBehaviour
     {
         if (playerTransform == null)
             playerTransform = MinimapManager.Instance.PlayerTransform;
+
         if (minimapBoundingBox == null || playerTransform == null) return;
         float realWidth = minimapBoundingBox.bounds.size.x;
         float realHeight = minimapBoundingBox.bounds.size.z;

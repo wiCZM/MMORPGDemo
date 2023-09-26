@@ -16,11 +16,8 @@ namespace GameServer.Services
     {
         public MapService()
         {
-            //MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapCharacterEnterRequest>(this.OnMapCharacterEnter);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapEntitySyncRequest>(this.OnMapEntitySync);
-
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapTeleportRequest>(this.OnMapTeleport);
-
         }
 
         public void Init()
@@ -32,21 +29,15 @@ namespace GameServer.Services
         private void OnMapEntitySync(NetConnection<NetSession> sender, MapEntitySyncRequest request)
         {
             Character character = sender.Session.Character;
-            Log.InfoFormat("OnMapEntitySync:characterID:{0}:{1} Enity.Id:{2} Evt:{3} Entity:{4}",character.Info.Name, character.Info.Id, request.entitySync.Id, request.entitySync.Event,request.entitySync.Entity.String());
-
+            Log.InfoFormat("OnMapEntitySync:characterID:{0}:{1} Enity.Id:{2} Evt:{3} Entity:{4}", character.Info.Name, character.Info.Id, request.entitySync.Id, request.entitySync.Event, request.entitySync.Entity.String());
             MapManager.Instance[character.Info.mapId].UpdateEntity(request.entitySync);
         }
 
         internal void SendEntityUpdate(NetConnection<NetSession> conn, NEntitySync entity)
         {
-            NetMessage message = new NetMessage();
-            message.Response = new NetMessageResponse();
-
-            message.Response.mapEntitySync = new MapEntitySyncResponse();
-            message.Response.mapEntitySync.entitySyncs.Add(entity);
-
-            byte[] data = PackageHandler.PackMessage(message);
-            conn.SendData(data, 0, data.Length);
+            conn.Session.Response.mapEntitySync = new MapEntitySyncResponse();
+            conn.Session.Response.mapEntitySync.entitySyncs.Add(entity);
+            conn.SendResponse();
         }
 
         void OnMapTeleport(NetConnection<NetSession> sender,MapTeleportRequest request)
@@ -64,10 +55,14 @@ namespace GameServer.Services
             {
                 Log.WarningFormat("Source TeleporterID [{0}] LinkTo ID[{1}] not existed", request.teleporterId,source.LinkTo);
             }
-
             TeleporterDefine target = DataManager.Instance.Teleporters[source.LinkTo];
 
             MapManager.Instance[source.MapID].CharacterLeave(character);
+            if (target.Position == null)
+            {
+                Log.ErrorFormat("TeleporterDefine ID {0} has null Position", target.ID);
+                return;
+            }
             character.Position = target.Position;
             character.Direction = target.Direction;
             MapManager.Instance[target.MapID].CharacterEnter(sender,character);

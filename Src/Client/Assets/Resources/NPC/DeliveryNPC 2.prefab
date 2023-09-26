@@ -20,7 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4747206133542400}
   - component: {fileID: 95674091259450992}
-  - component: {fileID: 114319623499620414}
+  - component: {fileID: 65769678832811452}
+  - component: {fileID: 114267974176898900}
   m_Layer: 0
   m_Name: DeliveryNPC 2
   m_TagString: Untagged
@@ -1228,15 +1229,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1007579698008306}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -309.669, y: -272.76, z: 61.091}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4000545031948078}
   - {fileID: 4395558712313076}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &4850874410936978
 Transform:
   m_ObjectHideFlags: 1
@@ -1321,6 +1322,18 @@ Transform:
   m_Father: {fileID: 4309746655632258}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65769678832811452
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1007579698008306}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.7064924, z: 1}
+  m_Center: {x: 0, y: 0.9432473, z: 0}
 --- !u!95 &95674091259450992
 Animator:
   serializedVersion: 3
@@ -1339,7 +1352,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114319623499620414
+--- !u!114 &114267974176898900
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1350,6 +1363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8708c18170b5344e971f8e2b60da158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcId: 1
 --- !u!137 &137066355552153304
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -51,7 +51,7 @@ namespace Network
     /// <typeparam name="T">消息发送者类型</typeparam>
     public class PackageHandler<T>
     {
-        private MemoryStream stream = new MemoryStream(64 * 1024);
+        private MemoryStream stream = new MemoryStream(1024 * 1024);
         private int readOffset = 0;
 
         private T sender;
@@ -71,7 +71,7 @@ namespace Network
         {
             if(stream.Position + count > stream.Capacity)
             {
-                throw new Exception("PackageHandler write buffer overflow");
+                stream.Capacity = (int)(stream.Position + count);
             }
             stream.Write(data, offset, count);
 

@@ -26,7 +26,6 @@ public class LoadingManager : MonoBehaviour {
         "初始化...",
         "加载玩家数据...",
         "加载场景资源...",
-        "预加载音效...",
     };
     // Use this for initialization
     IEnumerator Start()
@@ -49,6 +48,11 @@ public class LoadingManager : MonoBehaviour {
         //Init basic services
         MapService.Instance.Init();
         UserService.Instance.Init();
+        StatusService.Instance.Init();
+        FriendService.Instance.Init();
+
+        ShopManager.Instance.Init();
+
 
         TestManager.Instance.Init();
         // Fake Loading Simulate
@@ -66,7 +70,7 @@ public class LoadingManager : MonoBehaviour {
             }
             else if (i >= 1)
             {
-                tipText.text = ""; // 清空tipText的内容
+                tipText.text = ""; 
                 loadingText.text = "加载完成！";
                 yield return new WaitForSeconds(1f);
                 break;
@@ -84,8 +88,6 @@ public class LoadingManager : MonoBehaviour {
         yield return null;
     }
 
-
-    // Update is called once per frame
     void Update () {
 
     }

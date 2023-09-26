@@ -1,247 +1,153 @@
-2023-08-29 22:14:54,199 [ 1] INFO  Unity: LoadingManager start
-2023-08-29 22:14:58,285 [ 1] INFO  Unity: DataManager > DataManager()
-2023-08-29 22:14:58,882 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{FormatException: Input string was not in the correct format, System.Int32.Parse (System.String s, NumberStyles style, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:640)
-System.Int32.Parse (System.String s, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:208)
-System.Convert.ToInt32 (System.String value, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:1277)
-System.String.System.IConvertible.ToInt32 (IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:2391)
-System.Convert.ToType (System.Object value, System.Type conversionType, IFormatProvider provider, Boolean try_target_to_type) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2910)
-System.Convert.ChangeType (System.Object value, System.Type conversionType, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2511)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
-Rethrow as JsonSerializationException: Error converting value "ID" to type 'System.Int32'. Path '1.ID', line 3, position 9.
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
-Rethrow as JsonSerializationException: Could not convert string 'ID' to dictionary key type 'System.Int32'. Create a TypeConverter to convert from the string to the key type object. Path '1.ID', line 3, position 9.
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
-}</args></log4net.Error>
-2023-08-29 22:15:12,802 [ 1] INFO  Unity: UserLoginRequest::user :12345 psw:12345
-2023-08-29 22:15:12,810 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-08-29 22:15:12,811 [ 1] INFO  Unity: DoConnect
-2023-08-29 22:15:12,812 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
-2023-08-29 22:15:12,814 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
+2023-09-24 23:30:59,692 [ 1] INFO  Unity: LoadingManager start
+2023-09-24 23:31:02,831 [ 1] INFO  Unity: DataManager > DataManager()
+2023-09-24 23:31:23,176 [ 1] INFO  Unity: UserLoginRequest::user :1 psw:1
+2023-09-24 23:31:23,178 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-09-24 23:31:23,179 [ 1] INFO  Unity: DoConnect
+2023-09-24 23:31:23,181 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-09-24 23:31:23,183 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
 
-2023-08-29 22:15:12,821 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-08-29 22:15:13,449 [ 1] INFO  Unity: UserLoginRequest::user :12345 psw:12345
-2023-08-29 22:15:13,699 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2023-08-29 22:15:13,706 [ 1] INFO  Unity: LoadLevel: CharSelect
-2023-08-29 22:15:14,028 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-29 22:15:14,045 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{FormatException: Input string was not in the correct format, System.Int32.Parse (System.String s, NumberStyles style, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:640)
-System.Int32.Parse (System.String s, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:208)
-System.Convert.ToInt32 (System.String value, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:1277)
-System.String.System.IConvertible.ToInt32 (IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:2391)
-System.Convert.ToType (System.Object value, System.Type conversionType, IFormatProvider provider, Boolean try_target_to_type) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2910)
-System.Convert.ChangeType (System.Object value, System.Type conversionType, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2511)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
-Rethrow as JsonSerializationException: Error converting value "ID" to type 'System.Int32'. Path '1.ID', line 3, position 9.
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
-Rethrow as JsonSerializationException: Could not convert string 'ID' to dictionary key type 'System.Int32'. Create a TypeConverter to convert from the string to the key type object. Path '1.ID', line 3, position 9.
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
-}</args></log4net.Error>
-2023-08-29 22:15:17,644 [ 1] INFO  Unity: Select Char:[1]雷电法[Wizard]
-2023-08-29 22:15:17,661 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{FormatException: Input string was not in the correct format, System.Int32.Parse (System.String s, NumberStyles style, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:640)
-System.Int32.Parse (System.String s, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:208)
-System.Convert.ToInt32 (System.String value, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:1277)
-System.String.System.IConvertible.ToInt32 (IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:2391)
-System.Convert.ToType (System.Object value, System.Type conversionType, IFormatProvider provider, Boolean try_target_to_type) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2910)
-System.Convert.ChangeType (System.Object value, System.Type conversionType, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2511)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
-Rethrow as JsonSerializationException: Error converting value "ID" to type 'System.Int32'. Path '1.ID', line 3, position 9.
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
-Rethrow as JsonSerializationException: Could not convert string 'ID' to dictionary key type 'System.Int32'. Create a TypeConverter to convert from the string to the key type object. Path '1.ID', line 3, position 9.
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
-}</args></log4net.Error>
-2023-08-29 22:15:18,979 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2023-08-29 22:15:19,011 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2023-08-29 22:15:27,258 [ 1] ERROR Unity: Message handler exception:, Input string was not in a correct format., mscorlib,   at System.String.ParseFormatSpecifier (System.String str, System.Int32& ptr, System.Int32& n, System.Int32& width, System.Boolean& left_align, System.String& format) [0x00011] in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:2495 
-  at System.String.FormatHelper (System.Text.StringBuilder result, IFormatProvider provider, System.String format, System.Object[] args) [0x000ce] in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:1923 
-  at System.String.Format (IFormatProvider provider, System.String format, System.Object[] args) [0x00000] in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:1873 
-  at System.String.Format (System.String format, System.Object[] args) [0x00000] in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:1868 
-  at UnityEngine.DebugLogHandler.LogFormat (LogType logType, UnityEngine.Object context, System.String format, System.Object[] args) [0x00005] in C:\buildslave\unity\build\Runtime\Export\Logger\DebugLogHandler.cs:9 
-  at UnityEngine.Logger.LogFormat (LogType logType, System.String format, System.Object[] args) [0x00017] in C:\buildslave\unity\build\Runtime\Export\Logger\Logger.cs:113 
-  at UnityEngine.Debug.LogFormat (System.String format, System.Object[] args) [0x00009] in C:\buildslave\unity\build\Runtime\Export\Debug.bindings.cs:108 
-  at Managers.ItemManager.Init (System.Collections.Generic.List`1 items) [0x00038] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Managers\ItemManager.cs:23 
-  at Services.UserService.OnGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) [0x00050] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Services\UserService.cs:252 
-  at Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg) [0x00044] in D:\T2\Unity\Demo\Mymmorpg\Src\Lib\Common\Network\MessageDistributer.cs:105 
-2023-08-29 22:15:27,269 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{FormatException: Input string was not in a correct format., System.String.ParseFormatSpecifier (System.String str, System.Int32& ptr, System.Int32& n, System.Int32& width, System.Boolean& left_align, System.String& format) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:2495)
-System.String.FormatHelper (System.Text.StringBuilder result, IFormatProvider provider, System.String format, System.Object[] args) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:1923)
-System.String.Format (IFormatProvider provider, System.String format, System.Object[] args) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:1873)
-System.String.Format (System.String format, System.Object[] args) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:1868)
-UnityEngine.DebugLogHandler.LogFormat (LogType logType, UnityEngine.Object context, System.String format, System.Object[] args) (at C:/buildslave/unity/build/Runtime/Export/Logger/DebugLogHandler.cs:9)
-UnityEngine.Logger.LogFormat (LogType logType, System.String format, System.Object[] args) (at C:/buildslave/unity/build/Runtime/Export/Logger/Logger.cs:113)
-UnityEngine.Debug.LogFormat (System.String format, System.Object[] args) (at C:/buildslave/unity/build/Runtime/Export/Debug.bindings.cs:108)
-Managers.ItemManager.Init (System.Collections.Generic.List`1 items) (at Assets/Scripts/Managers/ItemManager.cs:23)
-Services.UserService.OnGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) (at Assets/Scripts/Services/UserService.cs:252)
-Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg) (at D:/T2/Unity/Demo/Mymmorpg/Src/Lib/Common/Network/MessageDistributer.cs:105)
-}</args></log4net.Error>
-2023-08-29 22:15:27,326 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
-2023-08-29 22:15:27,335 [ 1] INFO  Unity: AddCharacter:2:雷电法 Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-08-29 22:15:27,347 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-08-29 22:15:27,348 [ 1] INFO  Unity: OnCharacterEnter:1
-2023-08-29 22:15:27,351 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-08-29 22:15:27,973 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
-
-2023-08-29 22:15:27,979 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
-
-2023-08-29 22:15:28,103 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-29 22:15:28,614 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-29 22:16:03,078 [ 1] INFO  Unity: LoadLevel: CharSelect
-2023-08-29 22:16:03,080 [ 1] INFO  Unity: UserGameLeaveRequest
-2023-08-29 22:16:03,260 [ 1] INFO  Unity: OnMapCharacterLeave:CharID:2
-2023-08-29 22:16:03,264 [ 1] INFO  Unity: RemoveCharacter:2
-2023-08-29 22:16:03,267 [ 1] INFO  Unity: OnGameLeave:Success [None]
-2023-08-29 22:16:03,269 [ 1] INFO  Unity: Character_2_雷电法 OnDestroy :ID:2 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
-2023-08-29 22:16:03,394 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-29 22:16:03,412 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{FormatException: Input string was not in the correct format, System.Int32.Parse (System.String s, NumberStyles style, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:640)
-System.Int32.Parse (System.String s, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:208)
-System.Convert.ToInt32 (System.String value, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:1277)
-System.String.System.IConvertible.ToInt32 (IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:2391)
-System.Convert.ToType (System.Object value, System.Type conversionType, IFormatProvider provider, Boolean try_target_to_type) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2910)
-System.Convert.ChangeType (System.Object value, System.Type conversionType, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2511)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
-Rethrow as JsonSerializationException: Error converting value "ID" to type 'System.Int32'. Path '1.ID', line 3, position 9.
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
-Rethrow as JsonSerializationException: Could not convert string 'ID' to dictionary key type 'System.Int32'. Create a TypeConverter to convert from the string to the key type object. Path '1.ID', line 3, position 9.
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
-}</args></log4net.Error>
-2023-08-29 22:16:04,605 [ 1] INFO  Unity: Select Char:[1]雷电法[Wizard]
-2023-08-29 22:16:04,622 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{FormatException: Input string was not in the correct format, System.Int32.Parse (System.String s, NumberStyles style, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:640)
-System.Int32.Parse (System.String s, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:208)
-System.Convert.ToInt32 (System.String value, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:1277)
-System.String.System.IConvertible.ToInt32 (IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:2391)
-System.Convert.ToType (System.Object value, System.Type conversionType, IFormatProvider provider, Boolean try_target_to_type) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2910)
-System.Convert.ChangeType (System.Object value, System.Type conversionType, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2511)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
-Rethrow as JsonSerializationException: Error converting value "ID" to type 'System.Int32'. Path '1.ID', line 3, position 9.
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
-Rethrow as JsonSerializationException: Could not convert string 'ID' to dictionary key type 'System.Int32'. Create a TypeConverter to convert from the string to the key type object. Path '1.ID', line 3, position 9.
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
-}</args></log4net.Error>
-2023-08-29 22:16:05,852 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2023-08-29 22:16:05,877 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2023-08-29 22:16:08,981 [ 1] ERROR Unity: Message handler exception:, Input string was not in a correct format., mscorlib,   at System.String.ParseFormatSpecifier (System.String str, System.Int32& ptr, System.Int32& n, System.Int32& width, System.Boolean& left_align, System.String& format) [0x00011] in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:2495 
-  at System.String.FormatHelper (System.Text.StringBuilder result, IFormatProvider provider, System.String format, System.Object[] args) [0x000ce] in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:1923 
-  at System.String.Format (IFormatProvider provider, System.String format, System.Object[] args) [0x00000] in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:1873 
-  at System.String.Format (System.String format, System.Object[] args) [0x00000] in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:1868 
-  at UnityEngine.DebugLogHandler.LogFormat (LogType logType, UnityEngine.Object context, System.String format, System.Object[] args) [0x00005] in C:\buildslave\unity\build\Runtime\Export\Logger\DebugLogHandler.cs:9 
-  at UnityEngine.Logger.LogFormat (LogType logType, System.String format, System.Object[] args) [0x00017] in C:\buildslave\unity\build\Runtime\Export\Logger\Logger.cs:113 
-  at UnityEngine.Debug.LogFormat (System.String format, System.Object[] args) [0x00009] in C:\buildslave\unity\build\Runtime\Export\Debug.bindings.cs:108 
-  at Managers.ItemManager.Init (System.Collections.Generic.List`1 items) [0x00038] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Managers\ItemManager.cs:23 
-  at Services.UserService.OnGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) [0x00050] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Services\UserService.cs:252 
-  at Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg) [0x00044] in D:\T2\Unity\Demo\Mymmorpg\Src\Lib\Common\Network\MessageDistributer.cs:105 
-2023-08-29 22:16:08,983 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{FormatException: Input string was not in a correct format., System.String.ParseFormatSpecifier (System.String str, System.Int32& ptr, System.Int32& n, System.Int32& width, System.Boolean& left_align, System.String& format) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:2495)
-System.String.FormatHelper (System.Text.StringBuilder result, IFormatProvider provider, System.String format, System.Object[] args) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:1923)
-System.String.Format (IFormatProvider provider, System.String format, System.Object[] args) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:1873)
-System.String.Format (System.String format, System.Object[] args) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:1868)
-UnityEngine.DebugLogHandler.LogFormat (LogType logType, UnityEngine.Object context, System.String format, System.Object[] args) (at C:/buildslave/unity/build/Runtime/Export/Logger/DebugLogHandler.cs:9)
-UnityEngine.Logger.LogFormat (LogType logType, System.String format, System.Object[] args) (at C:/buildslave/unity/build/Runtime/Export/Logger/Logger.cs:113)
-UnityEngine.Debug.LogFormat (System.String format, System.Object[] args) (at C:/buildslave/unity/build/Runtime/Export/Debug.bindings.cs:108)
-Managers.ItemManager.Init (System.Collections.Generic.List`1 items) (at Assets/Scripts/Managers/ItemManager.cs:23)
-Services.UserService.OnGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) (at Assets/Scripts/Services/UserService.cs:252)
-Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg) (at D:/T2/Unity/Demo/Mymmorpg/Src/Lib/Common/Network/MessageDistributer.cs:105)
-}</args></log4net.Error>
-2023-08-29 22:16:09,027 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
-2023-08-29 22:16:09,027 [ 1] INFO  Unity: AddCharacter:3:雷电法 Map:1 Entity:(3:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-08-29 22:16:09,030 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-08-29 22:16:09,031 [ 1] INFO  Unity: OnCharacterEnter:1
-2023-08-29 22:16:09,033 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-08-29 22:16:09,657 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
-
-2023-08-29 22:16:09,657 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
-
-2023-08-29 22:16:09,783 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-29 22:16:10,315 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-08-29 22:18:24,285 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
-
-  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
-  at Network.NetClient.ProcessRecv () [0x00084] in D:\T2\Unity\Demo\Mymmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:340 
-
-2023-08-29 22:18:24,286 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
+2023-09-24 23:31:25,227 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
 UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:354)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:434)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:271)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:166)
+Services.UserService:ConnectToServer() (at Assets/Scripts/Services/UserService.cs:60)
+Services.UserService:SendLogin(String, String) (at Assets/Scripts/Services/UserService.cs:137)
+UILogin:OnClickLogin() (at Assets/Scripts/UI/UILogin.cs:36)
+UnityEngine.EventSystems.EventSystem:Update()
 
-2023-08-29 22:18:24,368 [ 1] INFO  Unity: DoConnect
-2023-08-29 22:18:24,369 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
-2023-08-29 22:18:24,371 [ 1] INFO  Unity: Connect[0] to server 10.0.0.100:8000
-
-2023-08-29 22:18:26,429 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-2023-08-29 22:18:26,430 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+2023-09-24 23:31:25,231 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
 
   at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
   at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
 UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:273)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:166)
+Services.UserService:ConnectToServer() (at Assets/Scripts/Services/UserService.cs:60)
+Services.UserService:SendLogin(String, String) (at Assets/Scripts/Services/UserService.cs:137)
+UILogin:OnClickLogin() (at Assets/Scripts/UI/UILogin.cs:36)
+UnityEngine.EventSystems.EventSystem:Update()
 
-2023-08-29 22:18:26,502 [ 1] INFO  Unity: DoConnect
-2023-08-29 22:18:26,503 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
-2023-08-29 22:18:26,504 [ 1] INFO  Unity: Connect[1] to server 10.0.0.100:8000
+2023-09-24 23:31:25,231 [ 1] INFO  Unity: DoConnect
+2023-09-24 23:31:25,231 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-09-24 23:31:25,233 [ 1] INFO  Unity: Connect[1] to server 10.0.0.100:8000
 
-2023-08-29 22:18:28,539 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+2023-09-24 23:31:27,278 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
 UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:271)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:166)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:312)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:429)
 
-2023-08-29 22:18:28,540 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+2023-09-24 23:31:27,279 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
 
   at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
   at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
 UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:273)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:166)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:312)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:429)
 
-2023-08-29 22:18:28,572 [ 1] INFO  Unity: DoConnect
-2023-08-29 22:18:28,572 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
-2023-08-29 22:18:28,573 [ 1] INFO  Unity: Connect[2] to server 10.0.0.100:8000
+2023-09-24 23:31:27,338 [ 1] INFO  Unity: DoConnect
+2023-09-24 23:31:27,340 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-09-24 23:31:27,342 [ 1] INFO  Unity: Connect[2] to server 10.0.0.100:8000
 
-2023-08-29 22:18:30,605 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+2023-09-24 23:31:29,389 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
 UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:271)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:166)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:312)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:429)
 
-2023-08-29 22:18:30,606 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+2023-09-24 23:31:29,391 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
 
   at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
   at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
 UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:273)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:166)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:312)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:429)
 
-2023-08-29 22:18:30,606 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :1 reason:Cannot connect to server
-2023-08-29 22:18:32,169 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-08-29 22:18:32,169 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-09-24 23:31:29,392 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :1 reason:Cannot connect to server
+2023-09-24 23:31:32,601 [ 1] INFO  Unity: UserLoginRequest::user :1 psw:1
+2023-09-24 23:31:32,602 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-09-24 23:31:32,603 [ 1] INFO  Unity: DoConnect
+2023-09-24 23:31:32,605 [ 1] INFO  Unity: NetClient.DoConnect on 10.0.0.100:8000
+2023-09-24 23:31:32,606 [ 1] INFO  Unity: Connect[3] to server 10.0.0.100:8000
+
+2023-09-24 23:31:32,607 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-09-24 23:31:33,370 [ 1] INFO  Unity: OnLogin:Success [None]
+2023-09-24 23:31:33,371 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-09-24 23:31:33,656 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-09-24 23:31:35,481 [ 1] INFO  Unity: Select Char:[1]11[Warrior]
+2023-09-24 23:31:36,563 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2023-09-24 23:31:36,730 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2023-09-24 23:31:36,732 [ 1] INFO  Unity: ItemManager: Init[Id:1,Count:20]
+2023-09-24 23:31:36,733 [ 1] INFO  Unity: ItemManager: Init[Id:2,Count:20]
+2023-09-24 23:31:36,735 [ 1] INFO  Unity: ItemManager: Init[Id:1001,Count:1]
+2023-09-24 23:31:36,737 [ 1] INFO  Unity: ItemManager: Init[Id:1002,Count:2]
+2023-09-24 23:31:36,739 [ 1] INFO  Unity: ItemManager.Instance: True
+2023-09-24 23:31:36,741 [ 1] INFO  Unity: Reset: Setting ItemId 1 with count 20 at index 0
+2023-09-24 23:31:36,742 [ 1] INFO  Unity: Reset: Setting ItemId 2 with count 20 at index 1
+2023-09-24 23:31:36,743 [ 1] INFO  Unity: Reset: Setting ItemId 1001 with count 1 at index 2
+2023-09-24 23:31:36,744 [ 1] INFO  Unity: Reset: Setting ItemId 1002 with count 2 at index 4
+2023-09-24 23:31:36,752 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
+2023-09-24 23:31:36,755 [ 1] INFO  Unity: AddCharacter:1:11 Map:1 Entity:(9:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-09-24 23:31:36,758 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-09-24 23:31:37,434 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2023-09-24 23:31:37,434 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2023-09-24 23:31:37,605 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-09-24 23:31:37,623 [ 1] WARN  Unity: UIMinimap Start196208
 UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+UIMinimap:Start() (at Assets/Scripts/UI/Minimap/UIMinimap.cs:20)
 
-2023-08-29 22:18:32,172 [ 1] INFO  Unity: Character_3_雷电法 OnDestroy :ID:3 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
+2023-09-24 23:31:39,279 [ 1] INFO  Unity: MoveForward
+2023-09-24 23:31:39,280 [ 1] INFO  Unity: MoveForward
+2023-09-24 23:31:39,337 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:MoveFwd entity:(0:pos:(0,0,0),dir:(0,100,0),spd:300
+
+2023-09-24 23:31:39,448 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(0,52,0),dir:(0,100,0),spd:300
+
+2023-09-24 23:31:39,615 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(0,103,0),dir:(0,100,0),spd:300
+
+2023-09-24 23:31:39,791 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(0,155,0),dir:(0,100,0),spd:300
+
+2023-09-24 23:31:39,953 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(0,207,0),dir:(0,100,0),spd:300
+
+2023-09-24 23:31:40,121 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(0,259,0),dir:(0,100,0),spd:300
+
+2023-09-24 23:31:40,299 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:None entity:(0:pos:(0,310,0),dir:(0,100,0),spd:300
+
+2023-09-24 23:31:40,379 [ 1] INFO  Unity: Stop
+2023-09-24 23:31:40,380 [ 1] INFO  Unity: Stop
+2023-09-24 23:31:40,413 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+    [0]evt:Idle entity:(0:pos:(0,310,0),dir:(0,100,0),spd:0
+
+2023-09-24 23:31:41,291 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
+2023-09-24 23:31:41,291 [ 1] INFO  Unity: AddCharacter:2:22 Map:1 Entity:(10:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-09-24 23:31:41,297 [ 1] INFO  Unity: OnFriendList
+2023-09-24 23:31:45,193 [ 1] INFO  Unity: OnFriendList
+2023-09-24 23:31:58,380 [ 1] INFO  Unity: SendTeamInviteRequest
+2023-09-24 23:31:59,713 [ 1] INFO  Unity: OnFriendList
+2023-09-24 23:31:59,716 [ 1] INFO  Unity: OnTeamInviteResponse
+2023-09-24 23:31:59,719 [ 1] INFO  Unity: OnTeamInfo
+2023-09-24 23:32:06,543 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-09-24 23:32:06,543 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:172)
+
+2023-09-24 23:32:06,545 [ 1] INFO  Unity: Character_1_11 OnDestroy :ID:9 POS:(5325, 4000, 820) DIR:(100, 0, 0) SPD:0 
+2023-09-24 23:32:06,546 [ 1] INFO  Unity: Character_2_22 OnDestroy :ID:10 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 

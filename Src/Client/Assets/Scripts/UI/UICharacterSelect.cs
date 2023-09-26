@@ -107,7 +107,6 @@ public class UICharacterSelect : MonoBehaviour {
 
             for (int i = 0; i < User.Instance.Info.Player.Characters.Count; i++)
             {
-
                 GameObject go = Instantiate(uiCharInfo, this.uiCharList);
                 UICharInfo chrInfo = go.GetComponent<UICharInfo>();
                 chrInfo.info = User.Instance.Info.Player.Characters[i];

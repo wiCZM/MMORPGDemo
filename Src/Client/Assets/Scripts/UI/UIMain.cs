@@ -1,4 +1,5 @@
-﻿using Models;
+﻿using Managers;
+using Models;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,8 @@ public class UIMain : MonoSingleton<UIMain> {
 
     public Text avatarName;
     public Text avatarLevel;
+
+    public UITeam TeamWindow;
 
     protected override void OnStart()
     {
@@ -21,21 +24,10 @@ public class UIMain : MonoSingleton<UIMain> {
         this.avatarLevel.text = User.Instance.CurrentCharacter.Level.ToString();
     }
 
-    void Update() {
-
-    }
     public void BackToCharSelect()
     {
         SceneManager.Instance.LoadScene("CharSelect");
         Services.UserService.Instance.SendGameLeave();
-    }
-
-    public void OnClickTest()
-    {
-        UITest test = UIManager.Instance.Show<UITest>();
-        test.SetTitle("这是一个测试UI");
-        test.OnClose += Test_OnClose;
-
     }
 
     private void Test_OnClose(UIWindow sender, UIWindow.WindowResult result)
@@ -46,5 +38,35 @@ public class UIMain : MonoSingleton<UIMain> {
     public void OnclickBag()
     {
         UIManager.Instance.Show<UIBag>();
+    }
+
+    public void OnclickShop()
+    {
+        UIManager.Instance.Show<UIShop>();
+    }
+
+    public void OnclickCharEquip()
+    {
+        UIManager.Instance.Show<UICharEquip>();
+    }
+
+    public void OnclickQuest()
+    {
+        UIManager.Instance.Show<UIQuestSystem>();
+    }
+
+    public void OnClickFriend()
+    {
+        UIManager.Instance.Show<UIFriends>();
+    }
+
+    public void OnClickSetting()
+    {
+        UIManager.Instance.Show<UISetting>();
+    }
+
+    public void ShowTeamUI(bool show)
+    {
+        TeamWindow.ShowTeam(show);
     }
 }

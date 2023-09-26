@@ -149,7 +149,6 @@ namespace Network
             }
         }
 
-
         /// <summary>
         /// 启动消息处理器
         /// [多线程模式]
@@ -202,7 +201,7 @@ namespace Network
                     if (this.messageQueue.Count  == 0)
                     {
                         threadEvent.WaitOne();
-                        //Log.WarningFormat("[{0}]MessageDistribute Thread[{1}] Continue:", DateTime.Now, Thread.CurrentThread.ManagedThreadId);
+                        Log.WarningFormat("[{0}]MessageDistribute Thread[{1}] Continue:", DateTime.Now, Thread.CurrentThread.ManagedThreadId);
                         continue;
                     }
                     MessageArgs package = this.messageQueue.Dequeue();

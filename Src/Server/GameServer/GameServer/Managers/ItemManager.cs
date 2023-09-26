@@ -80,23 +80,24 @@ namespace GameServer.Managers
                 item = new Item(dbItem);
                 this.Items.Add(itemId, item);
             }
+            this.Owner.StatusManager.AddGoldChange(itemId, count, StatusAction.Add);
             Log.InfoFormat("[{0}]AddItem[{1}:{2}]", this.Owner.Data.ID, item, count);
             //DBService.Instance.Save();
             return true;
         }
 
-        public bool RemoveItem(int ItemId, int count)
+        public bool RemoveItem(int itemId, int count)
         {
-            if (!this.Items.ContainsKey(ItemId))
+            if (!this.Items.ContainsKey(itemId))
             {
                 return false;
             }
-            Item item = this.Items[ItemId];
+            Item item = this.Items[itemId];
             if (item.Count < count)
                 return false;
             item.Remove(count);
+            this.Owner.StatusManager.AddGoldChange(itemId, count, StatusAction.Delete);
             Log.InfoFormat("[{0}]RemoveItem[{1} removeCount{2}]", this.Owner.Data.ID, item, count);
-            DBService.Instance.Save();
             return true;
         }
 
